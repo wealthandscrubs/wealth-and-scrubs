@@ -5,10 +5,11 @@
   "type": "module",
   "description": "Static Wealth & Scrubs website",
   "scripts": {
-    "build": "eleventy",
-    "dev": "eleventy --serve",
+    "sync-data": "node scripts/sync-content-metadata.mjs",
+    "build": "node scripts/sync-content-metadata.mjs && eleventy",
+    "dev": "node scripts/sync-content-metadata.mjs && eleventy --serve",
     "clean": "rm -rf _site",
-    "new-post": "node scripts/new-post.mjs"
+    "new-post": "node scripts/new-post.mjs && node scripts/sync-content-metadata.mjs"
   },
   "devDependencies": {
     "@11ty/eleventy": "3.1.6",
