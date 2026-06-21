@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if title and title != site.name %}{{ title }} | {% elif category %}{{ category.name }} | {% endif %}{{ site.name }}</title>
+    <meta name="description" content="{{ description or category.description or excerpt or site.description }}">
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <link rel="stylesheet" href="/assets/css/site.css">
+    <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
+    <meta property="og:site_name" content="{{ site.name }}">
+    <meta property="og:title" content="{{ title or category.name or site.name }}">
+    <meta property="og:description" content="{{ description or category.description or excerpt or site.description }}">
+    <meta property="og:type" content="{% if tags and 'post' in tags %}article{% else %}website{% endif %}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    {% if featuredImage %}<meta property="og:image" content="{{ site.url }}{{ featuredImage }}">{% endif %}
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="{{ site.name }} home">
+          <span>{{ site.name }}</span>
+          <small>{{ site.tagline }}</small>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          {% for item in navigation %}
+            <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+          {% endfor %}
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      {{ content | safe }}
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div>
+          <strong>{{ site.name }}</strong>
+          <p>{{ site.description }}</p>
+        </div>
+        <nav aria-label="Footer navigation">
+          <a href="/about/">About</a>
+          <a href="/contact/">Contact</a>
+          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+          <a href="/privacy-policy/">Privacy Policy</a>
+        </nav>
+        <p class="copyright">&copy; {% year %} {{ site.name }}. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="/assets/js/site.js" defer></script>
+  </body>
+</html>

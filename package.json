@@ -1,0 +1,17 @@
+{
+  "name": "wealth-and-scrubs",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Static Wealth & Scrubs website",
+  "scripts": {
+    "build": "eleventy",
+    "dev": "eleventy --serve",
+    "clean": "rm -rf _site",
+    "new-post": "node scripts/new-post.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "@11ty/eleventy-img": "6.0.4"
+  }
+}

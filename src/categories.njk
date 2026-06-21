@@ -1,0 +1,23 @@
+---
+layout: layouts/base.njk
+pagination:
+  data: categoryData
+  size: 1
+  alias: category
+permalink: "/category/{{ category.slug }}/index.html"
+---
+<section class="archive-shell">
+  <header class="page-hero">
+    <p class="eyebrow">Browse by topic</p>
+    <h1>{{ category.name }}</h1>
+    <p>{{ category.description }}</p>
+  </header>
+  {% set categoryPosts = collections.posts | postsByCategory(category.name) %}
+  <div class="card-grid">
+    {% for post in categoryPosts %}
+      {% include "partials/post-card.njk" %}
+    {% else %}
+      <p>New articles are coming soon.</p>
+    {% endfor %}
+  </div>
+</section>

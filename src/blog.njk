@@ -1,0 +1,18 @@
+---
+layout: layouts/base.njk
+title: All Posts
+description: Browse the latest savings, side hustle, nursing life, travel, and self-care articles from Wealth & Scrubs.
+permalink: /blog/
+---
+<section class="archive-shell">
+  <header class="page-hero">
+    <p class="eyebrow">The latest</p>
+    <h1>All Posts</h1>
+    <p>{{ description }}</p>
+  </header>
+  <div class="card-grid">
+    {% for post in collections.posts %}
+      {% include "partials/post-card.njk" %}
+    {% endfor %}
+  </div>
+</section>

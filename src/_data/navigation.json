@@ -1,0 +1,9 @@
+[
+  { "label": "Home", "url": "/" },
+  { "label": "Deals & Discounts", "url": "/category/deals-discounts/" },
+  { "label": "Money & Side Hustles", "url": "/money-side-hustles/" },
+  { "label": "Nursing Life", "url": "/nursing-life/" },
+  { "label": "Travel Savings", "url": "/resources/" },
+  { "label": "Lifestyle & Self-Care", "url": "/lifestyle-self-care/" },
+  { "label": "About", "url": "/about/" }
+]

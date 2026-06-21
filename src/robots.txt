@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wealthandscrubs.pages.dev/sitemap.xml

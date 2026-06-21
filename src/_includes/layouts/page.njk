@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+---
+<article class="page-shell">
+  {% if slug == "home" %}
+    <header class="home-hero">
+      <div>
+        <p class="eyebrow">Save more. Earn more. Live better.</p>
+        <h1>Money guidance for life beyond the bedside.</h1>
+        <p>Practical discounts, side hustles, travel savings, and everyday ideas for nurses and anyone making a paycheck work harder.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="/blog/">Explore the latest posts</a>
+          <a class="text-button" href="/about/">Meet Wealth & Scrubs</a>
+        </div>
+      </div>
+    </header>
+  {% else %}
+    <header class="page-hero">
+      <p class="eyebrow">{{ eyebrow or site.name }}</p>
+      <h1>{{ title }}</h1>
+      {% if description %}<p>{{ description }}</p>{% endif %}
+    </header>
+  {% endif %}
+  <div class="content prose">
+    {{ content | safe }}
+  </div>
+  {% if slug == "home" %}
+    <section class="latest-posts" aria-labelledby="latest-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Fresh from the blog</p>
+          <h2 id="latest-heading">Latest Posts</h2>
+        </div>
+        <a href="/blog/">View all posts</a>
+      </div>
+      <div class="card-grid">
+        {% for post in collections.posts | limit(6) %}
+          {% include "partials/post-card.njk" %}
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+</article>

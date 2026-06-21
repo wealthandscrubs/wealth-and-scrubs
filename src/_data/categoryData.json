@@ -1,0 +1,7 @@
+[
+  { "name": "Deals & Discounts", "slug": "deals-discounts", "description": "Verified discounts, freebies, cashback offers, and practical ways to pay less." },
+  { "name": "Money & Side Hustles", "slug": "money-side-hustles", "description": "Realistic income ideas, money-saving apps, budgeting help, and beginner-friendly financial guidance." },
+  { "name": "Nursing Life", "slug": "nursing-life", "description": "Useful resources for long shifts, busy schedules, career growth, and life beyond the bedside." },
+  { "name": "Travel Savings", "slug": "travel-savings", "description": "Travel discounts, hotel perks, and strategies for planning a better trip for less." },
+  { "name": "Lifestyle & Self-Care", "slug": "lifestyle-self-care", "description": "Meal prep, self-care, organization, wellness, and easier routines for busy lives." }
+]
