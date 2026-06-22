@@ -1,0 +1,9 @@
+{
+  "name": "wealth-and-scrubs",
+  "compatibility_date": "2026-06-22",
+  "workers_dev": true,
+  "preview_urls": true,
+  "assets": {
+    "directory": "./_site"
+  }
+}

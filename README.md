@@ -62,15 +62,14 @@ pnpm build
 
 The deployable site is generated in `_site/`.
 
-## Deploy on Cloudflare Pages
+## Deploy on Cloudflare Workers
 
-Connect this repository to a Cloudflare Pages project and use:
+Connect this repository to a Cloudflare Workers project and use:
 
 - Build command: `pnpm build`
-- Build output directory: `_site`
-- Node.js version: `22`
+- Deploy command: `npx wrangler deploy`
 
-After Cloudflare assigns the final `pages.dev` address, update `url` in `src/_data/site.json` and the sitemap address in `src/robots.txt`.
+The `wrangler.jsonc` file deploys the generated `_site` directory as static assets. After connecting a custom domain, update `url` in `src/_data/site.json` and the sitemap address in `src/robots.txt`.
 
 ## Re-import WordPress
 
