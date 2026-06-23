@@ -5,12 +5,8 @@
   "preview_urls": true,
   "routes": [
     {
-      "pattern": "wealthandscrubs.com",
-      "custom_domain": true
-    },
-    {
-      "pattern": "www.wealthandscrubs.com",
-      "custom_domain": true
+      "pattern": "wealthandscrubs.com/*",
+      "zone_name": "wealthandscrubs.com"
     }
   ],
   "assets": {
