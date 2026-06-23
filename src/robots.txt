@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://wealth-and-scrubs.brooke-maelpn.workers.dev/sitemap.xml
+Sitemap: https://wealthandscrubs.com/sitemap.xml
