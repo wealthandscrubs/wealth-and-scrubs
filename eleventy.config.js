@@ -1,4 +1,11 @@
+import fs from "fs";
+import path from "path";
+import cheerio from "cheerio";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+
+function escapeRegExp(string) {
+  return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
@@ -15,6 +22,74 @@ export default function (eleventyConfig) {
         decoding: "async"
       }
     }
+  });
+
+  // Affiliate linkify transform
+  // Loads src/_data/affiliate-links.json and replaces plain text occurrences
+  // of advertiser names with affiliate anchor tags in generated HTML.
+  const affiliateFile = path.join(process.cwd(), "src", "_data", "affiliate-links.json");
+  let affiliates = {};
+  try {
+    const raw = fs.readFileSync(affiliateFile, "utf8");
+    affiliates = JSON.parse(raw);
+  } catch (e) {
+    // file may not exist yet; continue without affiliate replacements
+    affiliates = {};
+  }
+
+  const advertisers = Object.keys(affiliates).sort((a, b) => b.length - a.length);
+
+  eleventyConfig.addTransform("affiliate-linkify", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) return content;
+    if (!advertisers.length) return content;
+
+    const $ = cheerio.load(content, { decodeEntities: false });
+
+    const skipTags = new Set(["a", "script", "style", "code", "pre", "noscript"]);
+
+    const pageReplacements = Object.fromEntries(advertisers.map((a) => [a, 0]));
+    const maxPerAdvertiserPerPage = 1;
+
+    $("body")
+      .find("*")
+      .each((i, el) => {
+        if (!el || !el.type) return;
+        if (skipTags.has(el.tagName)) return;
+
+        $(el)
+          .contents()
+          .filter(function () {
+            return this.type === "text";
+          })
+          .each((ti, node) => {
+            let text = node.data;
+            if (!text || !text.trim()) return;
+
+            for (const name of advertisers) {
+              if (pageReplacements[name] >= maxPerAdvertiserPerPage) continue;
+              const url = affiliates[name];
+              if (!url) continue;
+
+              const regex = new RegExp("\\b" + escapeRegExp(name) + "\\b", "gi");
+              if (!regex.test(text)) continue;
+
+              text = text.replace(regex, (match) => {
+                pageReplacements[name] += 1;
+                return `<a href="${url}" rel="nofollow noopener noreferrer" target="_blank">${match}</a>`;
+              });
+
+              if (pageReplacements[name] >= maxPerAdvertiserPerPage) {
+                // stop replacing this advertiser further on this page
+              }
+            }
+
+            if (text !== node.data) {
+              $(node).replaceWith(text);
+            }
+          });
+      });
+
+    return $.html();
   });
 
   eleventyConfig.addFilter("readableDate", (value) => {
