@@ -189,6 +189,12 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   border-radius: 0 var(--radius) var(--radius) 0;
   background: var(--soft);
 }
+.prose .aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+.prose .aligncenter img { margin: 0 auto; }
 .travel-savings-callout {
   padding: 24px;
   border: 1px solid var(--line);
