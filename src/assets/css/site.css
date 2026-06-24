@@ -143,7 +143,7 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   background: transparent;
   filter: drop-shadow(0 18px 34px rgb(0 0 0 / 32%));
 }
-.home-hero h1 { margin-bottom: 24px; color: var(--white); text-align: center; }
+.home-hero h1 { margin-bottom: 24px; color: var(--rose-light); text-align: center; }
 .home-hero p:not(.eyebrow) { max-width: 720px; color: rgb(255 255 255 / 88%); font-size: clamp(1.08rem, 2.4vw, 1.35rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
 .home-hero .text-button { border-color: rgb(255 255 255 / 50%); color: var(--white); }
@@ -165,7 +165,7 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   color: var(--white);
 }
 
-.page-hero h1, .post-hero h1 { max-width: 960px; margin-bottom: 20px; color: var(--white); }
+.page-hero h1, .post-hero h1 { max-width: 960px; margin-bottom: 20px; color: var(--rose-light); }
 .page-hero > p:not(.eyebrow), .post-meta { max-width: 720px; margin: 0; color: rgb(255 255 255 / 84%); font-size: 1.12rem; }
 .eyebrow { display: inline-block; margin: 0 0 14px; color: var(--rose-light); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
 
