@@ -12,6 +12,7 @@
   --gold: #c9877d;
   --rose-light: #f2c5bc;
   --link-pink: #ffd8d2;
+  --deep-rose: #d7928a;
   --line: #5a4147;
   --white: #fff;
   --shadow: 0 16px 42px rgb(0 0 0 / 48%);
@@ -179,6 +180,11 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   font-size: var(--section-title-size);
 }
 .prose h2, .prose h3, .prose h4 { margin-top: 2.2em; }
+.prose .app-subheading {
+  margin-top: 1.25em;
+  color: var(--deep-rose);
+  font-size: clamp(1.22rem, 2.1vw, 1.55rem);
+}
 .prose p, .prose li { overflow-wrap: anywhere; }
 .prose a { font-weight: 700; }
 .prose ul, .prose ol { padding-left: 1.5em; }
