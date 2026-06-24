@@ -11,6 +11,7 @@
   --coral: #e4aaa0;
   --gold: #c9877d;
   --rose-light: #f2c5bc;
+  --link-pink: #ffd8d2;
   --line: #5a4147;
   --white: #fff;
   --shadow: 0 16px 42px rgb(0 0 0 / 48%);
@@ -41,7 +42,7 @@ body {
 }
 
 img { display: block; max-width: 100%; height: auto; }
-a { color: var(--rose-light); text-underline-offset: 0.18em; }
+a { color: var(--link-pink); text-underline-offset: 0.18em; }
 button, input, textarea, select { font: inherit; }
 
 h1, h2, h3, h4 {
