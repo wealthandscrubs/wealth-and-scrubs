@@ -16,6 +16,7 @@
   --shadow: 0 16px 42px rgb(0 0 0 / 48%);
   --radius: 18px;
   --title-size: clamp(2.65rem, 8vw, 5.9rem);
+  --section-title-size: clamp(1.8rem, 4vw, 2.7rem);
 }
 
 * { box-sizing: border-box; }
@@ -172,6 +173,10 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
 
 .content { width: min(780px, 100%); margin: 0 auto; }
 .prose > :first-child { margin-top: 0; }
+.prose h1, .prose h2, .prose h3 {
+  color: var(--rose-light);
+  font-size: var(--section-title-size);
+}
 .prose h2, .prose h3 { margin-top: 2.2em; }
 .prose p, .prose li { overflow-wrap: anywhere; }
 .prose a { font-weight: 700; }
@@ -190,7 +195,7 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   background: var(--soft);
   color: var(--ink);
 }
-.travel-savings-callout h2,
+.travel-savings-callout h2 { color: var(--rose-light); }
 .travel-savings-callout li {
   color: var(--ink);
 }
