@@ -130,24 +130,22 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   display: grid;
   align-items: center;
   background:
-    radial-gradient(circle, rgb(255 255 255 / 46%) 0 1px, transparent 1.6px) 0 0 / 112px 112px,
-    radial-gradient(circle, rgb(228 170 160 / 42%) 0 1px, transparent 1.7px) 48px 62px / 149px 149px,
-    radial-gradient(circle at 85% 25%, rgb(201 135 125 / 22%), transparent 34%),
-    linear-gradient(100deg, rgb(3 3 3 / 99%), rgb(24 18 21 / 96%));
-  color: var(--white);
+    radial-gradient(circle at 18% 20%, rgb(228 170 160 / 18%), transparent 30%),
+    radial-gradient(circle at 86% 16%, rgb(201 135 125 / 16%), transparent 28%),
+    linear-gradient(180deg, #fff 0%, #fff9f7 68%, #f6ddd8 100%);
+  color: #160f11;
 }
 .home-hero > div { max-width: 850px; margin: 0 auto; }
 .hero-brand-banner {
   width: min(820px, 100%);
   margin: 0 auto 30px;
-  border: 1px solid rgb(228 170 160 / 46%);
-  border-radius: 8px;
-  background: var(--white);
-  box-shadow: 0 20px 46px rgb(0 0 0 / 34%);
+  background: transparent;
+  filter: drop-shadow(0 16px 28px rgb(99 54 48 / 12%));
 }
-.home-hero h1 { margin-bottom: 24px; color: var(--white); text-align: center; }
-.home-hero p:not(.eyebrow) { max-width: 720px; color: rgb(255 255 255 / 88%); font-size: clamp(1.08rem, 2.4vw, 1.35rem); }
+.home-hero h1 { margin-bottom: 24px; color: #160f11; text-align: center; }
+.home-hero p:not(.eyebrow) { max-width: 720px; color: rgb(22 15 17 / 82%); font-size: clamp(1.08rem, 2.4vw, 1.35rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
+.home-hero .text-button { border-color: rgb(22 15 17 / 34%); color: #160f11; }
 .primary-button, .text-button { display: inline-flex; min-height: 48px; align-items: center; padding: 11px 19px; border-radius: 999px; font-weight: 800; text-decoration: none; }
 .primary-button {
   background: linear-gradient(115deg, #f0bdb4, #bd746a 52%, #e3a39a);
