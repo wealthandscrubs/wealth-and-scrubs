@@ -85,8 +85,25 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   gap: 24px;
 }
 
-.brand { color: var(--rose-light); text-decoration: none; line-height: 1.05; }
-.brand span {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--rose-light);
+  text-decoration: none;
+  line-height: 1.05;
+}
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 48px;
+  border: 1px solid rgb(228 170 160 / 62%);
+  border-radius: 50%;
+  background: var(--white);
+  object-fit: cover;
+}
+.brand-copy { display: block; min-width: 0; }
+.brand-copy span {
   display: block;
   color: var(--rose-light);
   font-size: 1.55rem;
@@ -120,6 +137,14 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   color: var(--white);
 }
 .home-hero > div { max-width: 850px; margin: 0 auto; }
+.hero-brand-banner {
+  width: min(820px, 100%);
+  margin: 0 auto 30px;
+  border: 1px solid rgb(228 170 160 / 46%);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0 20px 46px rgb(0 0 0 / 34%);
+}
 .home-hero h1 { margin-bottom: 24px; color: var(--white); text-align: center; }
 .home-hero p:not(.eyebrow) { max-width: 720px; color: rgb(255 255 255 / 88%); font-size: clamp(1.08rem, 2.4vw, 1.35rem); }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; }
