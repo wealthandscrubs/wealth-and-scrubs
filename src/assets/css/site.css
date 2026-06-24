@@ -322,6 +322,14 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
 .card-category { color: var(--rose-light); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; }
 .card-date { color: var(--muted); font-size: 0.8rem; }
 .related-posts { margin: 80px 0 0; padding-top: 55px; border-top: 1px solid var(--line); }
+.related-posts .card-grid { gap: 18px; }
+.related-posts .post-card { box-shadow: 0 6px 22px rgb(0 0 0 / 36%); }
+.related-posts .card-image { aspect-ratio: 2 / 1; }
+.related-posts .card-body { padding: 16px; }
+.related-posts .card-body h3 { margin: 6px 0 8px; font-size: 1.22rem; }
+.related-posts .card-body p { margin-bottom: 14px; font-size: 0.86rem; }
+.related-posts .card-category { font-size: 0.7rem; }
+.related-posts .card-date { font-size: 0.76rem; }
 .latest-posts { margin-top: 80px; padding-top: 55px; border-top: 1px solid var(--line); }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
 .section-heading h2 { margin-bottom: 0; }
