@@ -185,6 +185,9 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   color: var(--deep-rose);
   font-size: clamp(1.22rem, 2.1vw, 1.55rem);
 }
+.prose .deep-rose-heading {
+  color: var(--deep-rose);
+}
 .prose p, .prose li { overflow-wrap: anywhere; }
 .prose a { font-weight: 700; }
 .prose ul, .prose ol { padding-left: 1.5em; }
