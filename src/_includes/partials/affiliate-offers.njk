@@ -1,0 +1,22 @@
+{% set offerCategories = affiliateCategories or categories or [] %}
+{% set offers = affiliateLinks | affiliateOffersFor(offerCategories) %}
+{% if offers.length %}
+  <section class="affiliate-offers" aria-labelledby="affiliate-offers-heading">
+    <div class="affiliate-offers__heading">
+      <p class="eyebrow">Helpful resources</p>
+      <h2 id="affiliate-offers-heading">Recommended Deals</h2>
+    </div>
+    <div class="affiliate-offers__grid">
+      {% for offer in offers %}
+        <article class="affiliate-offer">
+          <div>
+            <h3>{{ offer.advertiser }}</h3>
+            {% if offer.notes %}<p>{{ offer.notes }}</p>{% endif %}
+          </div>
+          <a class="primary-button" href="{{ offer.tracking_url }}" target="_blank" rel="sponsored noopener nofollow">Visit {{ offer.advertiser }}</a>
+        </article>
+      {% endfor %}
+    </div>
+    <p class="affiliate-offers__note">Affiliate links may earn Wealth & Scrubs a commission at no extra cost to you.</p>
+  </section>
+{% endif %}

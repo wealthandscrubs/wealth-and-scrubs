@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import cheerio from "cheerio";
+import * as cheerio from "cheerio";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 function escapeRegExp(string) {
@@ -10,12 +10,13 @@ function escapeRegExp(string) {
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/css": "assets/css" });
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/uploads": "assets/uploads" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
-  eleventyConfig.ignores.add("src/assets/uploads/**");
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
     widths: [480, 960, 1600],
+    transformOnRequest: false,
     htmlOptions: {
       imgAttributes: {
         loading: "lazy",
@@ -113,7 +114,8 @@ export default function (eleventyConfig) {
       "Money & Side Hustles": "money-side-hustles",
       "Nursing Life": "nursing-life",
       "Travel Savings": "travel-savings",
-      "Lifestyle & Self-Care": "lifestyle-self-care"
+      "Lifestyle & Self-Care": "lifestyle-self-care",
+      "Home & Organization": "home-organization"
     };
     if (knownSlugs[value]) return knownSlugs[value];
     return value
@@ -134,6 +136,61 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("excludeUrl", (items = [], url = "") =>
     items.filter((item) => item.url !== url)
   );
+
+  eleventyConfig.addFilter("affiliateOffersFor", (offers = [], categories = []) => {
+    const categoryList = Array.isArray(categories)
+      ? categories
+      : String(categories || "")
+          .split(",")
+          .map((category) => category.trim())
+          .filter(Boolean);
+    const categorySet = new Set(categoryList);
+    const expanded = new Set(categoryList);
+    let preferredCategories = [...categoryList];
+
+    if (categorySet.has("Deals & Discounts")) {
+      preferredCategories = [
+        "Cashback",
+        "Coupons",
+        ...preferredCategories,
+        "Lifestyle & Self-Care",
+        "Money & Side Hustles",
+        "Nursing Life",
+        "Travel Savings"
+      ];
+      preferredCategories.forEach((category) => expanded.add(category));
+    }
+
+    if (categorySet.has("Money & Side Hustles")) {
+      preferredCategories = ["Cashback", "Coupons", ...preferredCategories];
+      ["Cashback", "Coupons"].forEach((category) => expanded.add(category));
+    }
+
+    if (!expanded.size) {
+      preferredCategories = [
+        "Cashback",
+        "Coupons",
+        "Money & Side Hustles",
+        "Nursing Life",
+        "Travel Savings",
+        "Lifestyle & Self-Care"
+      ];
+      preferredCategories.forEach((category) => expanded.add(category));
+    }
+
+    const rank = new Map(preferredCategories.map((category, index) => [category, index]));
+
+    return offers
+      .filter((offer) => offer.tracking_url && offer.status === "approved")
+      .filter((offer) => expanded.has(offer.category))
+      .sort((a, b) => {
+        const categoryRank =
+          (rank.get(a.category) ?? 100) - (rank.get(b.category) ?? 100);
+        if (categoryRank) return categoryRank;
+        return a.advertiser.localeCompare(b.advertiser);
+      })
+      .slice(0, 6);
+  });
 
   eleventyConfig.addShortcode("year", () => new Date().getFullYear());
 

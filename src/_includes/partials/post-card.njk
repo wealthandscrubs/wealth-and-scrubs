@@ -1,4 +1,4 @@
-<article class="post-card{% if compactCard %} post-card--compact{% endif %}">
+<article class="post-card{% if compactCard %} post-card--compact{% endif %}"{% if usePostAnchors %} id="{{ post.data.slug or post.fileSlug }}"{% endif %}>
   {% if post.data.featuredImage and not compactCard %}
     <a class="card-image" href="{{ post.url }}" tabindex="-1" aria-hidden="true">
       <img src="{{ post.data.featuredImage }}" alt="{{ post.data.title }}" loading="lazy">

@@ -13,7 +13,18 @@ permalink: "/category/{{ category.slug }}/index.html"
     <p>{{ category.description }}</p>
   </header>
   {% set categoryPosts = collections.posts | postsByCategory(category.name) %}
+  {% if categoryPosts.length %}
+    <nav class="archive-index" aria-labelledby="archive-index-heading">
+      <h2 id="archive-index-heading">Post Index</h2>
+      <ul>
+        {% for post in categoryPosts %}
+          <li><a href="#{{ post.data.slug or post.fileSlug }}">{{ post.data.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
   <div class="card-grid">
+    {% set usePostAnchors = true %}
     {% for post in categoryPosts %}
       {% include "partials/post-card.njk" %}
     {% else %}
