@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
 h1 { font-size: var(--title-size); }
 h2 { font-size: clamp(2rem, 4.8vw, 3.4rem); }
 h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
-.has-rose-text { color: var(--rose-light); }
+.rose-text { color: var(--rose-light); }
 
 .skip-link {
   position: fixed;
@@ -231,7 +231,21 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
 .category-link-grid__item h3 { margin-top: 0; }
 .category-link-grid__item p { margin-bottom: 0; }
 
-.wp-block-button__link, .prose .button, .prose a[style*="background"] {
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 1.25rem 0;
+}
+.button-shell { display: contents; }
+.text-center { text-align: center; }
+.content-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  margin: 1.5rem 0;
+}
+.prose .button, .prose a[style*="background"] {
   display: inline-flex;
   min-height: 46px;
   align-items: center;
@@ -365,6 +379,7 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   body { font-size: 1rem; }
   .brand small { display: none; }
   .card-grid { grid-template-columns: 1fr; }
+  .content-columns { grid-template-columns: 1fr; }
   .category-link-grid { grid-template-columns: 1fr; }
   .page-hero, .post-hero { margin-bottom: 34px; }
   .prose table { display: block; overflow-x: auto; }

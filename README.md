@@ -1,16 +1,14 @@
 # Wealth & Scrubs Static Site
 
-This is the WordPress-free version of Wealth & Scrubs. It uses Eleventy to turn simple content files into a fast static website.
+This is the static version of Wealth & Scrubs. It uses Eleventy to turn simple content files into a fast website.
 
-## What Was Migrated
+## Site Contents
 
 - 16 published posts
 - 9 published pages
 - 30 original media files
 - Existing post URLs, categories, links, and affiliate disclosures
 - Responsive image optimization, RSS, sitemap, and mobile navigation
-
-The WordPress export is not copied into the public site. Drafts, trashed content, editor templates, account details, and author email metadata are excluded.
 
 ## Create a Post
 
@@ -71,18 +69,7 @@ Connect this repository to a Cloudflare Workers project and use:
 
 The `wrangler.jsonc` file deploys the generated `_site` directory as static assets. After connecting a custom domain, update `url` in `src/_data/site.json` and the sitemap address in `src/robots.txt`.
 
-## Re-import WordPress
-
-The migration script is repeatable:
-
-```bash
-ruby scripts/import_wordpress.rb /path/to/wordpress-export.xml
-```
-
-It replaces generated files in `src/posts/` and `src/pages/`, so only run it when intentionally refreshing the migration from a newer WordPress export.
-
 ## Important Launch Notes
 
-- Keep the WordPress site public until the replacement has been deployed and checked.
-- The WordPress contact form cannot run on a static site. A form service or email delivery function should be connected before launch.
+- The contact form needs a form service or email delivery function before launch.
 - Noteworthy is a system font and is not installed on every device. Visitors without it receive the handwriting-style fallbacks defined in `src/assets/css/site.css`.
