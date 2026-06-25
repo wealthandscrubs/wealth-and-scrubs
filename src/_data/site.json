@@ -3,5 +3,10 @@
   "tagline": "Building Wealth Beyond the Bedside",
   "description": "Practical savings, side hustles, nurse discounts, travel tips, and everyday money guidance.",
   "url": "https://wealthandscrubs.com",
-  "author": "Brooke | Wealth & Scrubs"
+  "author": "Brooke | Wealth & Scrubs",
+  "logo": "/assets/uploads/wealth-and-scrubs-icon-512.png",
+  "sameAs": [
+    "https://x.com/wealthandscrubs?s=11",
+    "https://t.me/WealthandScrubs"
+  ]
 }

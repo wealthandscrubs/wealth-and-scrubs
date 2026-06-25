@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if title and title != site.name %}{{ title }} | {% elif category %}{{ category.name }} | {% endif %}{{ site.name }}</title>
     <meta name="description" content="{{ description or category.description or excerpt or site.description }}">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/uploads/wealth-and-scrubs-icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/uploads/wealth-and-scrubs-icon-512.png">
@@ -12,11 +14,57 @@
     <link rel="stylesheet" href="/assets/css/site.css">
     <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
     <meta property="og:site_name" content="{{ site.name }}">
-    <meta property="og:title" content="{{ title or category.name or site.name }}">
+    <meta property="og:title" content="{% if title and title != site.name %}{{ title }} | {{ site.name }}{% elif category %}{{ category.name }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
     <meta property="og:description" content="{{ description or category.description or excerpt or site.description }}">
     <meta property="og:type" content="{% if tags and 'post' in tags %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     {% if featuredImage %}<meta property="og:image" content="{{ site.url }}{{ featuredImage }}">{% endif %}
+    <meta name="twitter:card" content="{% if featuredImage %}summary_large_image{% else %}summary{% endif %}">
+    <meta name="twitter:title" content="{% if title and title != site.name %}{{ title }} | {{ site.name }}{% elif category %}{{ category.name }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
+    <meta name="twitter:description" content="{{ description or category.description or excerpt or site.description }}">
+    {% if featuredImage %}<meta name="twitter:image" content="{{ site.url }}{{ featuredImage }}">{% endif %}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "{{ site.url }}/#organization",
+            "name": "{{ site.name }}",
+            "url": "{{ site.url }}/",
+            "logo": "{{ site.url }}{{ site.logo }}",
+            "sameAs": [
+              {% for profile in site.sameAs %}"{{ profile }}"{% if not loop.last %},{% endif %}{% endfor %}
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "{{ site.url }}/#website",
+            "name": "{{ site.name }}",
+            "url": "{{ site.url }}/",
+            "description": "{{ site.description }}",
+            "publisher": { "@id": "{{ site.url }}/#organization" }
+          }
+          {% if tags and 'post' in tags %},
+          {
+            "@type": "BlogPosting",
+            "@id": "{{ site.url }}{{ page.url }}#article",
+            "headline": "{{ title }}",
+            "description": "{{ description or excerpt or site.description }}",
+            "datePublished": "{{ date | isoDate }}",
+            "dateModified": "{{ page.date | isoDate }}",
+            "author": {
+              "@type": "Person",
+              "name": "{{ author or site.author }}"
+            },
+            "publisher": { "@id": "{{ site.url }}/#organization" },
+            "mainEntityOfPage": "{{ site.url }}{{ page.url }}"{% if featuredImage %},
+            "image": "{{ site.url }}{{ featuredImage }}"{% endif %}
+          }
+          {% endif %}
+        ]
+      }
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
