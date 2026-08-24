@@ -724,6 +724,254 @@ span.cashback-app-chip {
   color: var(--link-pink);
 }
 
+.money-hub-content {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.money-hub-intro {
+  margin: -18px 0 clamp(34px, 6vw, 56px);
+  text-align: center;
+}
+
+.money-hub-cta {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: 1px solid rgb(167 95 88 / 34%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 72%);
+  color: var(--deep-rose);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.money-hub-section {
+  margin: clamp(44px, 7vw, 76px) 0;
+}
+
+.money-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.money-topic-card {
+  min-height: 190px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 17px;
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.money-topic-card:hover {
+  border-color: rgb(201 135 125 / 46%);
+  box-shadow: 0 12px 28px rgb(51 51 51 / 8%);
+  transform: translateY(-2px);
+}
+
+.money-topic-card__icon {
+  font-size: 1.28rem;
+  line-height: 1;
+}
+
+.money-topic-card__title {
+  color: var(--deep-rose);
+  font-size: 1.18rem;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.money-topic-card__summary {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.42;
+}
+
+.money-topic-card__link {
+  margin-top: auto;
+  color: var(--link-pink);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.money-hub-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(180px, 0.9fr);
+  gap: clamp(20px, 5vw, 40px);
+  align-items: center;
+  padding: clamp(24px, 5vw, 38px);
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff4f7 100%);
+}
+
+.money-hub-note h2 {
+  margin: 0 0 10px;
+  color: var(--deep-rose);
+  font-size: var(--section-title-size);
+}
+
+.money-hub-note p:not(.eyebrow) {
+  max-width: 540px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.money-hub-note figure {
+  width: min(320px, 100%);
+  margin: 0 0 0 auto;
+}
+
+.money-hub-note img {
+  width: 100%;
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  box-shadow: 0 12px 26px rgb(51 51 51 / 8%);
+}
+
+.money-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.money-guide-panel {
+  scroll-margin-top: 108px;
+  padding: 20px;
+  border: 1px solid rgb(201 135 125 / 22%);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.money-guide-panel__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.money-guide-panel__heading span {
+  flex: 0 0 auto;
+  font-size: 1.18rem;
+}
+
+.money-guide-panel h3 {
+  margin: 0;
+  color: var(--deep-rose);
+  font-size: clamp(1.14rem, 2.2vw, 1.42rem);
+}
+
+.money-guide-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.48;
+}
+
+.money-guide-panel__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.money-guide-panel__links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid rgb(201 135 125 / 28%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 76%);
+  color: var(--deep-rose);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.money-guide-panel__note {
+  margin-top: 12px !important;
+  font-size: 0.86rem !important;
+}
+
+.money-latest-guides {
+  padding: clamp(34px, 6vw, 54px) 0;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  background: #fdecef;
+}
+
+.money-latest-guides > * {
+  width: min(1120px, calc(100% - 32px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.money-latest-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.money-latest-card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  min-height: 220px;
+  padding: 18px;
+  border: 1px solid rgb(201 135 125 / 20%);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.money-latest-card__category {
+  margin: 0;
+  color: var(--rose-light);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.money-latest-card h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(1.08rem, 2vw, 1.28rem);
+}
+
+.money-latest-card h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.money-latest-card p:not(.money-latest-card__category) {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.44;
+}
+
+.money-hub-cta:hover,
+.money-guide-panel__links a:hover,
+.money-latest-card h3 a:hover {
+  color: var(--link-pink);
+}
+
 .nav-toggle:focus-visible,
 .primary-button:focus-visible,
 .text-button:focus-visible,
@@ -731,7 +979,11 @@ span.cashback-app-chip {
 .read-more-link:focus-visible,
 .home-pathway:focus-visible,
 .home-link-row a:focus-visible,
-.home-shop-preview__links a:focus-visible {
+.home-shop-preview__links a:focus-visible,
+.money-hub-cta:focus-visible,
+.money-topic-card:focus-visible,
+.money-guide-panel__links a:focus-visible,
+.money-latest-card h3 a:focus-visible {
   outline: 3px solid rgb(201 135 125 / 42%);
   outline-offset: 3px;
 }
@@ -745,6 +997,19 @@ span.cashback-app-chip {
   .home-featured-list,
   .home-shop-preview {
     grid-template-columns: 1fr;
+  }
+  .money-topic-grid,
+  .money-latest-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .money-hub-note,
+  .money-guide-grid {
+    grid-template-columns: 1fr;
+  }
+  .money-hub-note figure {
+    width: min(280px, 100%);
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -779,15 +1044,22 @@ span.cashback-app-chip {
   .prose table { display: block; overflow-x: auto; }
   .home-pathway-grid,
   .home-featured-list,
-  .home-shop-preview__links {
+  .home-shop-preview__links,
+  .money-topic-grid,
+  .money-latest-grid {
     grid-template-columns: 1fr;
   }
   .home-pathway,
   .home-featured-item,
-  .home-shop-preview__links a {
+  .home-shop-preview__links a,
+  .money-topic-card,
+  .money-latest-card {
     min-height: auto;
   }
   .home-shop-preview { padding: 22px; }
+  .money-hub-intro { margin-top: -10px; }
+  .money-hub-note { padding: 22px; }
+  .money-guide-panel { padding: 17px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
