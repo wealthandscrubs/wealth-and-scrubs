@@ -1,5 +1,11 @@
 # Wealth & Scrubs
 
+## Master Redesign Rule
+- Before redesigning any Wealth & Scrubs website page, article, feature, storefront, navigation, affiliate placement, or visual system, read `MASTER_WEBSITE_REDESIGN_INSTRUCTIONS.md` and treat it as the governing redesign standard unless the site owner explicitly overrides it.
+
+## Codex Design Rule
+- Before making any design, layout, navigation, visual, or CSS changes, read `WEALTH_AND_SCRUBS_DESIGN_GUIDE.md` and follow it unless the site owner explicitly asks for a different direction.
+
 ## Website Management Goals
 - Increase qualified organic and social traffic.
 - Improve useful, editorially relevant affiliate clicks.
@@ -23,6 +29,11 @@ Nurses and everyday people looking to save money.
 - Use headings, bullet points, and tables when helpful.
 - Add an FAQ section to every post.
 - Avoid duplicate content.
+- No content published on Wealth & Scrubs may be copied, closely paraphrased, structurally imitated, or lightly rewritten from another website, article, blog, social-media post, product description, or other source.
+- Use external sources only to verify facts and conduct research; write all explanations, organization, examples, headings, descriptions, and final copy independently for Wealth & Scrubs.
+- Attribute factual information when a source requires attribution.
+- Before completing any page, review the final content for suspiciously similar phrasing and rewrite anything that could reasonably appear copied.
+- If originality cannot be confidently established, do not publish the content until it has been rewritten.
 
 ## Categories
 - Deals & Discounts
@@ -33,9 +44,20 @@ Nurses and everyday people looking to save money.
 - Home & Organization
 
 ## Internal Linking Rules
-- Add 3-8 internal links to related articles whenever possible.
-- Link category pages to relevant posts.
-- Build topic clusters around all six site categories.
+- Internal linking is a permanent site-wide requirement for Wealth & Scrubs.
+- Add useful internal links naturally when creating, editing, consolidating, or removing content.
+- Use descriptive anchor text instead of generic phrases such as "click here."
+- Link older posts to newer useful posts when relevant, and link newer posts back to important existing guides.
+- Connect related content across categories when it genuinely helps the reader.
+- Link detailed articles back to their appropriate category or hub page.
+- Link category and hub pages to their strongest, most useful articles.
+- Update internal links whenever URLs, titles, page structures, or deleted/consolidated content changes.
+- Remove or replace links pointing to deleted pages.
+- Prevent orphan pages by making sure important pages and posts have meaningful internal links leading to them.
+- Do not add links only to increase the number of links on a page.
+- Do not repeatedly link the same destination unnecessarily.
+- Do not force unrelated Wealth & Scrubs content together.
+- Before completing work on a major section, check for broken internal links, orphaned pages, hub/category-page links, related article connections, deleted URLs, descriptive anchor text, excessive repetition, and a logical next step for readers.
 
 ## Affiliate Rules
 - Treat the current Impact `My Brands` list as the sole allowlist for Impact advertisers.

@@ -4,8 +4,10 @@ import path from "node:path";
 const root = process.cwd();
 const affiliatePath = path.join(root, "affiliate-links.csv");
 const legacyAffiliatePath = path.join(root, "Affiliate_Database.csv");
+const affiliateLinkMapPath = path.join(root, "src", "_data", "affiliate-links.json");
 const contentPlanPath = path.join(root, "content-plan.md");
 const postsDir = path.join(root, "src", "posts");
+const autoLinkExcludedAdvertisers = new Set(["Coin", "PayPal", "Verizon"]);
 
 const affiliateHeaders = [
   "advertiser",
@@ -110,6 +112,13 @@ function syncAffiliates() {
     a.advertiser.localeCompare(b.advertiser),
   );
   writeCsv(affiliatePath, affiliateHeaders, rows);
+  const approvedLinks = Object.fromEntries(
+    rows
+      .filter((row) => row.status === "approved" && row.tracking_url)
+      .filter((row) => !autoLinkExcludedAdvertisers.has(row.advertiser))
+      .map((row) => [row.advertiser, row.tracking_url]),
+  );
+  fs.writeFileSync(affiliateLinkMapPath, `${JSON.stringify(approvedLinks, null, 2)}\n`);
   return rows.length;
 }
 

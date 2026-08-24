@@ -56,6 +56,7 @@ export default function (eleventyConfig) {
       .each((i, el) => {
         if (!el || !el.type) return;
         if (skipTags.has(el.tagName)) return;
+        if ($(el).closest("a").length) return;
 
         $(el)
           .contents()

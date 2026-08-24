@@ -13,22 +13,75 @@ permalink: "/category/{{ category.slug }}/index.html"
     <p>{{ category.description }}</p>
   </header>
   {% set categoryPosts = collections.posts | postsByCategory(category.name) %}
-  {% if categoryPosts.length %}
-    <nav class="archive-index" aria-labelledby="archive-index-heading">
-      <h2 id="archive-index-heading">Post Index</h2>
-      <ul>
-        {% for post in categoryPosts %}
-          <li><a href="#{{ post.data.slug or post.fileSlug }}">{{ post.data.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </nav>
+  {% if category.slug == "deals-discounts" %}
+    <section class="archive-intro" aria-labelledby="deals-guide-heading">
+      <h2 id="deals-guide-heading">How to Use These Deals</h2>
+      <p>Deals &amp; Discounts is where you can find money-saving guides, nurse discounts, freebies, cashback apps, free trials, and reward programs that may help stretch everyday spending.</p>
+      <p>Start with the topic that fits what you need right now: cashback for regular purchases, nurse and healthcare worker discounts, freebies, free trials, travel perks, or product recommendations. Each article gives you the details in one place so you can compare options before signing up or buying anything.</p>
+      <p>Some posts may include affiliate or referral links, which means Wealth &amp; Scrubs may earn a commission at no extra cost to you. The goal is to keep every recommendation practical, useful, and worth your time.</p>
+    </section>
   {% endif %}
-  <div class="card-grid">
-    {% set usePostAnchors = true %}
-    {% for post in categoryPosts %}
-      {% include "partials/post-card.njk" %}
+  {% if category.slug == "home-organization" %}
+    <section class="archive-intro" aria-labelledby="home-organization-guide-heading">
+      <h2 id="home-organization-guide-heading">Make Home Feel Easier to Manage</h2>
+      <p>Home &amp; Organization is for realistic systems that help busy nurses, healthcare workers, and families keep everyday life from feeling so scattered.</p>
+      <p>Start here when you need small-space ideas, decluttering tips, budget-friendly home refreshes, or simple routines that make workdays and days off feel smoother. The goal is not a perfect home. The goal is a home that supports your schedule, energy, and budget.</p>
+      <p>Use the post index below to jump straight to the topic you need most.</p>
+    </section>
+  {% endif %}
+  {% if categoryPosts.length %}
+    {% if category.slug == "deals-discounts" %}
+      <nav class="deals-topic-groups" aria-labelledby="deals-topic-heading">
+        <h2 id="deals-topic-heading">Post Categories</h2>
+        <section class="deals-topic-group" aria-labelledby="money-making-apps-heading">
+          <h3 id="money-making-apps-heading">Money Making Apps</h3>
+          <div class="deals-topic-grid">
+            <a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Full List of Cashback Apps &amp; Sites</a>
+            <a href="/2026/06/08/best-survey-apps-that-actually-pay-real-money/">Full List of Survey Apps</a>
+            <a href="/2026/06/07/10-money-saving-apps/">Reward Sites</a>
+            <a href="/2026/06/08/best-survey-apps-that-actually-pay-real-money/">Survey Apps That Actually Pay</a>
+            <a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Cashback Apps</a>
+          </div>
+        </section>
+        <section class="deals-topic-group" aria-labelledby="rewards-program-heading">
+          <h3 id="rewards-program-heading">Rewards Program</h3>
+          <div class="deals-topic-grid">
+            <a href="/2026/06/23/best-hotel-deals-and-reward-programs/">Hotel Deals &amp; Reward Program</a>
+            <a href="/2026/06/23/best-travel-reward-programs-and-cashback-apps/">Travel Deals &amp; Reward Program</a>
+            <a href="/2026/06/02/nursediscounts/">Nurse Discounts &amp; Healthcare Worker Perks</a>
+          </div>
+        </section>
+        <section class="deals-topic-group" aria-labelledby="free-programs-heading">
+          <h3 id="free-programs-heading">Free Programs</h3>
+          <div class="deals-topic-grid">
+            <a href="/2026/06/10/10-free-membership-trials-every-nurse-should-claim/">Membership Trials Nurses Should Claim</a>
+            <a href="/2026/06/10/10-places-nurses-can-earn-free-ce-credits-online/">Places Nurses Can Earn CE Credits Online</a>
+            <a href="/2026/06/10/9-freebies-nurses-can-get-and-how-to-find-them/">Freebies for Nurses</a>
+            <a href="/2026/06/10/ways-nurses-can-get-free-hotel-perks/">Ways Nurses Can Get Free Hotel Perks</a>
+          </div>
+        </section>
+      </nav>
     {% else %}
-      <p>New articles are coming soon.</p>
-    {% endfor %}
-  </div>
+      <nav class="archive-index" aria-labelledby="archive-index-heading">
+        <h2 id="archive-index-heading">Post Index</h2>
+        <ul>
+          {% for post in categoryPosts %}
+            <li><a href="{% if category.slug == "home-organization" %}{{ post.url }}{% else %}#{{ post.data.slug or post.fileSlug }}{% endif %}">{{ post.data.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
+  {% endif %}
+  {% if category.slug != "deals-discounts" and category.slug != "home-organization" %}
+    <div class="card-grid">
+      {% set usePostAnchors = true %}
+      {% for post in categoryPosts %}
+        {% include "partials/post-card.njk" %}
+      {% else %}
+        <p>New articles are coming soon.</p>
+      {% endfor %}
+    </div>
+  {% elif not categoryPosts.length %}
+    <p>New articles are coming soon.</p>
+  {% endif %}
 </section>
