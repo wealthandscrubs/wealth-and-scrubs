@@ -79,8 +79,12 @@
             <small>{{ site.tagline }}</small>
           </span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+          <span class="nav-toggle__icon" aria-hidden="true"></span>
+        </button>
         <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+          <p class="site-nav__label">Explore Wealth &amp; Scrubs</p>
           {% for item in navigation %}
             <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
           {% endfor %}

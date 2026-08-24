@@ -4,95 +4,130 @@ title: "Wealth & Scrubs"
 slug: "home"
 date: 2026-06-02
 permalink: "/index.html"
-excerpt: "Wealth & Scrubs is a lifestyle and savings resource for practical discounts, side hustles, travel savings, and everyday money guidance."
+excerpt: "Wealth & Scrubs helps nurses, healthcare workers, and busy women save more, earn more, find useful deals, and make everyday life easier."
 author: "Brooke | Wealth & Scrubs"
 categories: []
 tags: ["page"]
-featuredImage: "/assets/uploads/wealth-and-scrubs-banner-dark-1400.png"
+featuredImage: "/assets/uploads/wealth-and-scrubs-banner-1400.png"
 featuredImageAlt: "Wealth & Scrubs logo banner"
 ---
-<h3 class="text-center rose-text"><strong>Helping You Save More, Earn More, and Live Better</strong></h3>
-
-
-
-<p>A lifestyle and savings resource created for hardworking people who want to make the most of their money, time, and opportunities.</p>
-
-
-
-<p>Whether you’re looking for ways to save on everyday expenses, discover exclusive discounts, find side hustles, improve your financial wellness, or simply make life a little easier, you’re in the right place.</p>
-
-
-
-<p>At Wealth &amp; Scrubs, you’ll find practical tips, trusted recommendations, helpful resources, and real-world advice designed to help you build a better life without breaking the bank.</p>
-
-
-
-<h3><strong>Popular Topics</strong></h3>
-
-
-
-<p>✔️ <a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Best Cashback Apps</a></p>
-
-
-
-<p>✔️ <a href="/2026/06/02/nursediscounts/">Nurse Discounts &amp; Healthcare Worker Perks</a></p>
-
-
-
-<p>✔️ <a href="/resources/">Travel Savings Tips</a></p>
-
-
-
-<p>✔️ <a href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Side Hustles You Can Start Today</a></p>
-
-
-
-<p>✔️ Budget-Friendly Lifestyle Hacks</p>
-
-
-
-<p>✔️ <a href="/2026/06/23/product-reviews-and-recommendations/">Product Reviews &amp; Recommendations</a></p>
-
-
-
-<p>✔️ <a href="/money-side-hustles/">Freebies, Rewards &amp; Loyalty Programs</a></p>
-
-
-
-<p>✔️ Financial Wellness Resources</p>
-
-
-
-<h3><strong>Start Exploring</strong></h3>
-
-
-
-<p>📌 <a href="/blog/">Browse the latest articles</a></p>
-
-
-
-<p>📌 <a href="/2026/06/07/10-money-saving-apps/">Discover new ways to save money</a></p>
-
-
-
-<p>📌 <a href="/money-side-hustles/">Explore side hustles and income opportunities</a></p>
-
-
-
-<p>📌 <a href="/category/deals-discounts/">Find exclusive discounts and rewards</a></p>
-
-
-
-<p>📌 <a href="/lifestyle-self-care/">Build a lifestyle that works for you</a></p>
-
-
-
-<h3 class="text-center"><strong>Where smart savings meet everyday living.</strong> ✨💰🌹</h3>
-
-
-
-
-
-
-
-<p><strong>Affiliate Disclosure:</strong> <em>Some links on this website may be affiliate links, meaning I may earn a commission at no additional cost to you if you make a purchase through those links. I only recommend products, services, and resources that I believe provide value to my readers.</em></p>
+{% set pathways = [
+  {
+    label: "Save Money",
+    summary: "Cashback, grocery savings, freebies, discounts, and everyday ways to spend less.",
+    url: "/category/deals-discounts/",
+    accent: "Save"
+  },
+  {
+    label: "Make Extra Money",
+    summary: "Side hustles, apps, beginner investing, and practical money moves for busy schedules.",
+    url: "/money-side-hustles/",
+    accent: "Earn"
+  },
+  {
+    label: "Nursing Life",
+    summary: "Shift-friendly resources for burnout, CE credits, meals, routines, and life beyond work.",
+    url: "/nursing-life/",
+    accent: "Care"
+  },
+  {
+    label: "Deals & Useful Finds",
+    summary: "Helpful tools, rewards, product finds, and healthcare worker perks worth checking first.",
+    url: "/2026/06/23/product-reviews-and-recommendations/",
+    accent: "Find"
+  },
+  {
+    label: "Lifestyle Solutions",
+    summary: "Self-care, organization, home refreshes, and simple ideas that make the week easier.",
+    url: "/lifestyle-self-care/",
+    accent: "Live"
+  }
+] %}
+
+{% set featuredLinks = [
+  {
+    title: "Cashback Apps & Sites",
+    url: "/2026/06/02/best-cashback-apps-for-nurses-in-2026/",
+    summary: "A cleaner way to compare cashback, receipt, coupon, and shopping apps."
+  },
+  {
+    title: "Side Hustles Nurses Can Start This Weekend",
+    url: "/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/",
+    summary: "Flexible ideas that fit around healthcare schedules and real-life energy."
+  },
+  {
+    title: "Nurse Discounts & Healthcare Worker Perks",
+    url: "/2026/06/02/nursediscounts/",
+    summary: "A useful starting point before paying full price."
+  }
+] %}
+
+{% set savingsLinks = [
+  { title: "Cashback apps", url: "/2026/06/02/best-cashback-apps-for-nurses-in-2026/" },
+  { title: "Survey apps", url: "/2026/06/08/best-survey-apps-that-actually-pay-real-money/" },
+  { title: "Travel rewards", url: "/2026/06/23/best-travel-reward-programs-and-cashback-apps/" },
+  { title: "Freebies for Nurses", url: "/2026/06/10/9-freebies-nurses-can-get-and-how-to-find-them/" }
+] %}
+
+<section class="home-section home-pathways" id="start-exploring" aria-labelledby="home-pathways-heading">
+  <div class="section-heading section-heading--centered">
+    <p class="eyebrow">Start Here</p>
+    <h2 id="home-pathways-heading">Choose What Helps Today</h2>
+  </div>
+  <div class="home-pathway-grid">
+    {% for pathway in pathways %}
+      <a class="home-pathway" href="{{ pathway.url }}">
+        <span class="home-pathway__accent" aria-hidden="true">{{ pathway.accent }}</span>
+        <span class="home-pathway__title">{{ pathway.label }}</span>
+        <span class="home-pathway__summary">{{ pathway.summary }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-section home-featured" id="worth-checking-out" aria-labelledby="worth-checking-out-heading">
+  <div class="section-heading section-heading--centered">
+    <p class="eyebrow">Worth Checking Out</p>
+    <h2 id="worth-checking-out-heading">Useful Reads Without the Scroll Spiral</h2>
+  </div>
+  <div class="home-featured-list">
+    {% for item in featuredLinks %}
+      <article class="home-featured-item">
+        <h3><a href="{{ item.url }}">{{ item.title }}</a></h3>
+        <p>{{ item.summary }}</p>
+        <a class="read-more-link" href="{{ item.url }}">Read the guide</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="home-section home-shop-preview" id="shop-wealth-scrubs" aria-labelledby="shop-preview-heading">
+  <div class="home-shop-preview__content">
+    <p class="eyebrow">Shop Wealth &amp; Scrubs</p>
+    <h2 id="shop-preview-heading">A Curated Storefront Is Coming</h2>
+    <p>Original Wealth &amp; Scrubs products, digital downloads, nursing finds, and carefully chosen recommendations will live here without crowding the homepage.</p>
+  </div>
+  <div class="home-shop-preview__links" aria-label="Storefront preview links">
+    <a href="/2026/06/23/product-reviews-and-recommendations/">
+      <strong>Recommended Finds</strong>
+      <span>Helpful products and deal links with context.</span>
+    </a>
+    <a href="/2026/06/23/affordable-nurse-must-haves/">
+      <strong>Nurse Must-Haves</strong>
+      <span>Budget-friendly ideas for long shifts.</span>
+    </a>
+  </div>
+</section>
+
+<section class="home-section home-savings" aria-labelledby="home-savings-heading">
+  <div class="section-heading section-heading--centered">
+    <p class="eyebrow">Deals &amp; Savings</p>
+    <h2 id="home-savings-heading">Find Something Worth Saving On</h2>
+    <p>Quick paths to current savings resources, app roundups, rewards, and freebies.</p>
+  </div>
+  <div class="home-link-row">
+    {% for link in savingsLinks %}
+      <a href="{{ link.url }}">{{ link.title }}</a>
+    {% endfor %}
+  </div>
+</section>

@@ -5,12 +5,12 @@ layout: layouts/base.njk
   {% if slug == "home" %}
     <header class="home-hero">
       <div>
-        <img class="hero-brand-banner" src="/assets/uploads/wealth-and-scrubs-banner-dark-1400.png" alt="Wealth & Scrubs - Smart money. Healthcare life. Financial freedom." width="1400" height="700" fetchpriority="high">
-        <p class="eyebrow">Save more. Earn more. Live better.</p>
-        <h1>Money guidance for life beyond the bedside.</h1>
-        <p>Practical discounts, side hustles, travel savings, and everyday ideas for nurses and anyone making a paycheck work harder.</p>
+        <p class="eyebrow">Smart Money. Healthcare Life. Everyday Ease.</p>
+        <h1>Wealth &amp; Scrubs</h1>
+        <p>Simple money tips, useful deals, side hustle ideas, and nurse-aware resources for busy women who want life to feel a little easier.</p>
         <div class="hero-actions">
-          <a class="primary-button" href="/blog/">Explore the latest posts</a>
+          <a class="primary-button" href="#start-exploring">Start Exploring</a>
+          <a class="text-button" href="#worth-checking-out">See What&rsquo;s New</a>
         </div>
       </div>
     </header>
@@ -21,24 +21,7 @@ layout: layouts/base.njk
       {% if description %}<p>{{ description }}</p>{% endif %}
     </header>
   {% endif %}
-  <div class="content prose">
+  <div class="{% if slug == "home" %}home-content{% else %}content prose{% endif %}">
     {{ content | safe }}
   </div>
-  {% if slug == "home" %}
-    <section class="latest-posts" aria-labelledby="latest-heading">
-      <div class="section-heading">
-        <div>
-          <p class="eyebrow">Fresh from the blog</p>
-          <h2 id="latest-heading">Latest Posts</h2>
-        </div>
-        <a href="/blog/">View all posts</a>
-      </div>
-      <div class="card-grid">
-        {% set compactCard = true %}
-        {% for post in collections.posts | limit(6) %}
-          {% include "partials/post-card.njk" %}
-        {% endfor %}
-      </div>
-    </section>
-  {% endif %}
 </article>
