@@ -972,6 +972,254 @@ span.cashback-app-chip {
   color: var(--link-pink);
 }
 
+.nursing-hub-content {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+}
+
+.nursing-hub-intro {
+  width: min(760px, 100%);
+  margin: -18px auto clamp(34px, 6vw, 56px);
+  text-align: center;
+}
+
+.nursing-hub-intro h2 {
+  margin: 0 0 10px;
+  color: var(--deep-rose);
+  font-size: var(--section-title-size);
+}
+
+.nursing-hub-intro p:not(.eyebrow) {
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+.nursing-hub-cta {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  padding: 8px 14px;
+  border: 1px solid rgb(167 95 88 / 34%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 72%);
+  color: var(--deep-rose);
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nursing-hub-section {
+  margin: clamp(44px, 7vw, 76px) 0;
+}
+
+.nursing-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nursing-topic-card {
+  min-height: 210px;
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 17px;
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.nursing-topic-card:hover {
+  border-color: rgb(201 135 125 / 46%);
+  box-shadow: 0 12px 28px rgb(51 51 51 / 8%);
+  transform: translateY(-2px);
+}
+
+.nursing-topic-card__icon {
+  font-size: 1.26rem;
+  line-height: 1;
+}
+
+.nursing-topic-card__title {
+  color: var(--deep-rose);
+  font-size: 1.17rem;
+  font-weight: 800;
+  line-height: 1.16;
+}
+
+.nursing-topic-card__summary {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.42;
+}
+
+.nursing-topic-card__link {
+  margin-top: auto;
+  color: var(--link-pink);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.nursing-hub-note {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(180px, 0.88fr);
+  gap: clamp(20px, 5vw, 40px);
+  align-items: center;
+  padding: clamp(24px, 5vw, 38px);
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  background: linear-gradient(180deg, #ffffff 0%, #fff4f7 100%);
+}
+
+.nursing-hub-note h2 {
+  margin: 0 0 10px;
+  color: var(--deep-rose);
+  font-size: var(--section-title-size);
+}
+
+.nursing-hub-note p:not(.eyebrow) {
+  max-width: 560px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.nursing-hub-note figure {
+  width: min(300px, 100%);
+  margin: 0 0 0 auto;
+}
+
+.nursing-hub-note img {
+  width: 100%;
+  border: 1px solid rgb(201 135 125 / 24%);
+  border-radius: 8px;
+  box-shadow: 0 12px 26px rgb(51 51 51 / 8%);
+}
+
+.nursing-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: clamp(44px, 7vw, 76px) 0;
+}
+
+.nursing-guide-panel {
+  scroll-margin-top: 108px;
+  padding: 20px;
+  border: 1px solid rgb(201 135 125 / 22%);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.nursing-guide-panel__heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.nursing-guide-panel__heading span {
+  flex: 0 0 auto;
+  font-size: 1.18rem;
+}
+
+.nursing-guide-panel h3 {
+  margin: 0;
+  color: var(--deep-rose);
+  font-size: clamp(1.14rem, 2.2vw, 1.42rem);
+}
+
+.nursing-guide-panel p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+  line-height: 1.48;
+}
+
+.nursing-guide-panel__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.nursing-guide-panel__links a {
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border: 1px solid rgb(201 135 125 / 28%);
+  border-radius: 8px;
+  background: rgb(255 255 255 / 76%);
+  color: var(--deep-rose);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nursing-guide-panel__note {
+  margin-top: 12px !important;
+  font-size: 0.86rem !important;
+}
+
+.nursing-hub-section--soft {
+  padding: clamp(34px, 6vw, 54px) 0;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+  background: #fdecef;
+}
+
+.nursing-hub-section--soft > * {
+  width: min(1120px, calc(100% - 32px));
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.nursing-next-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nursing-next-grid a {
+  display: grid;
+  gap: 7px;
+  min-height: 126px;
+  padding: 18px;
+  border: 1px solid rgb(201 135 125 / 20%);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nursing-next-grid strong {
+  color: var(--deep-rose);
+  font-size: 1.08rem;
+  line-height: 1.18;
+}
+
+.nursing-next-grid span {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.42;
+}
+
+.nursing-hub-cta:hover,
+.nursing-guide-panel__links a:hover,
+.nursing-next-grid a:hover {
+  color: var(--link-pink);
+}
+
 .nav-toggle:focus-visible,
 .primary-button:focus-visible,
 .text-button:focus-visible,
@@ -983,7 +1231,11 @@ span.cashback-app-chip {
 .money-hub-cta:focus-visible,
 .money-topic-card:focus-visible,
 .money-guide-panel__links a:focus-visible,
-.money-latest-card h3 a:focus-visible {
+.money-latest-card h3 a:focus-visible,
+.nursing-hub-cta:focus-visible,
+.nursing-topic-card:focus-visible,
+.nursing-guide-panel__links a:focus-visible,
+.nursing-next-grid a:focus-visible {
   outline: 3px solid rgb(201 135 125 / 42%);
   outline-offset: 3px;
 }
@@ -999,14 +1251,19 @@ span.cashback-app-chip {
     grid-template-columns: 1fr;
   }
   .money-topic-grid,
-  .money-latest-grid {
+  .money-latest-grid,
+  .nursing-topic-grid,
+  .nursing-next-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .money-hub-note,
-  .money-guide-grid {
+  .money-guide-grid,
+  .nursing-hub-note,
+  .nursing-guide-grid {
     grid-template-columns: 1fr;
   }
-  .money-hub-note figure {
+  .money-hub-note figure,
+  .nursing-hub-note figure {
     width: min(280px, 100%);
     margin-right: auto;
     margin-left: auto;
@@ -1046,20 +1303,28 @@ span.cashback-app-chip {
   .home-featured-list,
   .home-shop-preview__links,
   .money-topic-grid,
-  .money-latest-grid {
+  .money-latest-grid,
+  .nursing-topic-grid,
+  .nursing-guide-grid,
+  .nursing-next-grid {
     grid-template-columns: 1fr;
   }
   .home-pathway,
   .home-featured-item,
   .home-shop-preview__links a,
   .money-topic-card,
-  .money-latest-card {
+  .money-latest-card,
+  .nursing-topic-card,
+  .nursing-next-grid a {
     min-height: auto;
   }
   .home-shop-preview { padding: 22px; }
   .money-hub-intro { margin-top: -10px; }
   .money-hub-note { padding: 22px; }
   .money-guide-panel { padding: 17px; }
+  .nursing-hub-intro { margin-top: -10px; }
+  .nursing-hub-note { padding: 22px; }
+  .nursing-guide-panel { padding: 17px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

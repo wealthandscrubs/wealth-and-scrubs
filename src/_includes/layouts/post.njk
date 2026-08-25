@@ -24,7 +24,7 @@ layout: layouts/base.njk
     <p>Some links may be affiliate links, which means Wealth & Scrubs may earn a commission at no extra cost to you.</p>
   </aside>
 
-  {% set related = collections.posts | excludeUrl(page.url) | limit(3) %}
+  {% set related = collections.posts | relatedPosts(page) | limit(3) %}
   {% if related.length and not hideRelatedPosts %}
     <section class="related-posts" aria-labelledby="related-heading">
       <h2 id="related-heading">Keep Reading</h2>

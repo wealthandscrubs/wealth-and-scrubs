@@ -138,6 +138,22 @@ export default function (eleventyConfig) {
     items.filter((item) => item.url !== url)
   );
 
+  eleventyConfig.addFilter("relatedPosts", (items = [], current = {}) => {
+    const currentCategories = new Set(current.data?.categories || []);
+    const currentUrl = current.url || "";
+
+    return items
+      .filter((item) => item.url !== currentUrl)
+      .map((item) => {
+        const categories = item.data?.categories || [];
+        const shared = categories.filter((category) => currentCategories.has(category)).length;
+        return { item, shared };
+      })
+      .filter(({ shared }) => shared > 0)
+      .sort((a, b) => b.shared - a.shared || b.item.date - a.item.date)
+      .map(({ item }) => item);
+  });
+
   eleventyConfig.addFilter("affiliateOffersFor", (offers = [], categories = []) => {
     const categoryList = Array.isArray(categories)
       ? categories

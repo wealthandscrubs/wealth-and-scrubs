@@ -21,7 +21,7 @@ layout: layouts/base.njk
       {% if description %}<p>{{ description }}</p>{% endif %}
     </header>
   {% endif %}
-  <div class="{% if slug == "home" %}home-content{% elif slug == "money-side-hustles" %}money-hub-content{% else %}content prose{% endif %}">
+  <div class="{% if slug == "home" %}home-content{% elif slug == "money-side-hustles" %}money-hub-content{% elif slug == "nursing-life" %}nursing-hub-content{% else %}content prose{% endif %}">
     {{ content | safe }}
   </div>
 </article>
