@@ -469,21 +469,25 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   text-decoration: none;
 }
 body:has(.cashback-guide) {
-  background-color: #fffefd;
+  background-color: #ffffff;
   background-image:
-    radial-gradient(circle at 12% 18%, rgb(255 255 255 / 96%) 0 1px, transparent 2px),
-    radial-gradient(circle at 82% 14%, rgb(245 208 221 / 58%) 0 1px, transparent 2px),
-    radial-gradient(circle at 26% 62%, rgb(255 241 199 / 52%) 0 1px, transparent 2px),
-    radial-gradient(circle at 72% 76%, rgb(255 255 255 / 92%) 0 1px, transparent 2px),
-    linear-gradient(180deg, #ffffff 0%, #fffafb 48%, #fffefd 100%);
+    radial-gradient(circle at 18% 20%, rgb(255 255 255) 0 1px, rgb(214 198 210 / 62%) 2px, transparent 5px),
+    radial-gradient(circle at 78% 26%, rgb(255 255 255) 0 1px, rgb(255 219 233 / 66%) 2px, transparent 6px),
+    radial-gradient(circle at 34% 78%, rgb(255 255 255) 0 1px, rgb(231 218 185 / 52%) 2px, transparent 5px),
+    repeating-linear-gradient(45deg, transparent 0 52px, rgb(225 214 222 / 30%) 52px 53px, transparent 54px 112px),
+    repeating-linear-gradient(135deg, transparent 0 52px, rgb(255 225 236 / 26%) 52px 53px, transparent 54px 112px),
+    linear-gradient(180deg, #ffffff 0%, #fffdfd 44%, #fff9fc 100%);
   background-attachment: fixed;
+  background-size: 150px 150px, 190px 190px, 220px 220px, 170px 170px, 170px 170px, auto;
 }
 body:has(.cashback-guide) .post-hero {
   background:
-    radial-gradient(circle at 16% 24%, rgb(255 255 255 / 92%) 0 1px, transparent 2px),
-    radial-gradient(circle at 78% 28%, rgb(255 231 238 / 64%) 0 1px, transparent 2px),
-    radial-gradient(circle at 50% 78%, rgb(255 244 213 / 58%) 0 1px, transparent 2px),
-    linear-gradient(180deg, #ffffff 0%, #fff8fb 56%, #fffefe 100%);
+    radial-gradient(circle at 14% 24%, rgb(255 255 255) 0 1px, rgb(216 202 213 / 64%) 2px, transparent 6px),
+    radial-gradient(circle at 82% 30%, rgb(255 255 255) 0 1px, rgb(255 219 233 / 70%) 2px, transparent 6px),
+    repeating-linear-gradient(45deg, transparent 0 48px, rgb(225 214 222 / 34%) 48px 49px, transparent 50px 102px),
+    repeating-linear-gradient(135deg, transparent 0 48px, rgb(255 226 237 / 30%) 48px 49px, transparent 50px 102px),
+    linear-gradient(180deg, #ffffff 0%, #fffbfd 60%, #ffffff 100%);
+  background-size: 150px 150px, 190px 190px, 150px 150px, 150px 150px, auto;
 }
 .cashback-app-section {
   margin: 2rem 0;
