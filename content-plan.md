@@ -41,7 +41,7 @@ This file is synchronized from `src/posts/` before every build.
 | 2026-06-07 | [Money Saving Apps Every Nurse Needs in 2026](/2026/06/07/10-money-saving-apps/) | Money & Side Hustles | 1189 | No |
 | 2026-06-03 | [5 Budget-Friendly Meal Prep Ideas for Nurses](/2026/06/03/5-budget-friendly-meal-prep-ideas-for-nurses/) | Lifestyle & Self-Care, Nursing Life | 481 | No |
 | 2026-06-02 | [15 Side Hustles Nurses Can Start This Weekend](/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/) | Money & Side Hustles | 419 | No |
-| 2026-06-02 | [Cashback Apps & Sites](/2026/06/02/best-cashback-apps-for-nurses-in-2026/) | Deals & Discounts, Money & Side Hustles | 269 | No |
+| 2026-06-02 | [Cashback Apps & Sites](/2026/06/02/best-cashback-apps-for-nurses-in-2026/) | Deals & Discounts, Money & Side Hustles | 228 | No |
 | 2026-06-02 | [How Nurses Can Start Investing With Just $50](/2026/06/02/how-nurses-can-start-investing-with-just-50/) | Money & Side Hustles | 522 | No |
 | 2026-06-02 | [The Ultimate Guide to Nurse Discounts (2026 Edition)](/2026/06/02/nursediscounts/) | Deals & Discounts, Nursing Life, Money & Side Hustles | 496 | No |
 <!-- AUTO:END -->

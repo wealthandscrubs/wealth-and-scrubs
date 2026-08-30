@@ -479,16 +479,6 @@ h3 { font-size: clamp(1.35rem, 3vw, 2rem); }
   text-align: center;
   text-transform: uppercase;
 }
-.cashback-guide__note {
-  margin: 1.2rem auto 2rem;
-  padding: 14px 16px;
-  border: 1px solid rgb(228 170 160 / 42%);
-  border-radius: 8px;
-  background: rgb(255 247 245 / 78%);
-  color: var(--muted);
-  font-size: clamp(0.96rem, 1.5vw, 1.06rem);
-  text-align: center;
-}
 .cashback-app-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
