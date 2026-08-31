@@ -4,7 +4,7 @@ layout: layouts/base.njk
 <article class="post-shell">
   <header class="post-hero">
     {% if categories and categories.length %}
-      <a class="eyebrow" href="/category/{{ categories[0] | categorySlug }}/">{{ categories[0] }}</a>
+      <a class="eyebrow" href="{% if categories[0] == 'Travel Savings' %}/resources/{% else %}/category/{{ categories[0] | categorySlug }}/{% endif %}">{{ categories[0] }}</a>
     {% else %}
       <p class="eyebrow">{{ site.name }}</p>
     {% endif %}

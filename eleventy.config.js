@@ -12,6 +12,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/uploads": "assets/uploads" });
   eleventyConfig.addPassthroughCopy({ "src/robots.txt": "robots.txt" });
+  eleventyConfig.addPassthroughCopy({ "src/_redirects": "_redirects" });
 
   eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
     formats: ["webp"],
@@ -57,6 +58,7 @@ export default function (eleventyConfig) {
         if (!el || !el.type) return;
         if (skipTags.has(el.tagName)) return;
         if ($(el).closest("a").length) return;
+        if ($(el).closest(".resource-row").length) return;
 
         $(el)
           .contents()

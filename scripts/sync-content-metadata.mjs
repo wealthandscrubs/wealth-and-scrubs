@@ -153,6 +153,7 @@ function syncContentPlan() {
     .map((file) => {
       const source = fs.readFileSync(path.join(postsDir, file), "utf8");
       return {
+        excluded: frontMatterValue(source, "eleventyExcludeFromCollections") === "true",
         title: frontMatterValue(source, "title"),
         date: frontMatterValue(source, "date"),
         categories: frontMatterValue(source, "categories"),
@@ -161,6 +162,7 @@ function syncContentPlan() {
         faq: /<h[2-4][^>]*>[^<]*FAQs?/i.test(source) ? "Yes" : "No",
       };
     })
+    .filter((post) => !post.excluded && post.url !== "false")
     .sort((a, b) => b.date.localeCompare(a.date) || a.title.localeCompare(b.title));
 
   const table = [

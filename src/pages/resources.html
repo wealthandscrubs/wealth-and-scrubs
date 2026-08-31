@@ -4,144 +4,77 @@ title: "Travel Savings"
 slug: "resources"
 date: 2026-06-04
 permalink: "/resources/index.html"
-excerpt: "Practical travel savings for nurses, including smarter ways to book flights, hotels, rental cars, attractions, rewards, and more."
+excerpt: "Travel better and spend smarter with practical ways to save on hotels, flights, rental cars, rewards, and travel perks."
+description: "Practical travel savings for nurses, including smarter ways to book flights, hotels, rental cars, rewards, cashback, and travel perks."
 author: "Brooke | Wealth & Scrubs"
 categories: []
 tags: ["page"]
+featuredImage: "/assets/uploads/travel-savings-hero.png"
+featuredImageAlt: "Passport, luggage, travel booking app, and stethoscope near an airport window"
+eyebrow: "Travel Savings"
 ---
-<p>Whether you are planning a family vacation, a weekend getaway, or your next travel nursing assignment, a little strategy can make every trip more affordable.</p>
+<div class="travel-landing">
+  <section class="travel-editorial-hero" aria-labelledby="travel-editorial-heading">
+    <div class="travel-editorial-hero__copy">
+      <p class="travel-label">Travel better. Spend smarter.</p>
+      <h2 id="travel-editorial-heading">Luxury travel energy with practical nurse-budget strategy.</h2>
+      <p>Save on hotels, flights, rental cars, rewards, and travel perks without turning trip planning into a pile of duplicate tabs.</p>
+    </div>
+    <figure class="travel-editorial-hero__image">
+      <img src="/assets/uploads/travel-savings-hero.png" alt="Passport, luggage, travel app, and stethoscope near an airport window">
+    </figure>
+    <aside class="travel-start-card" aria-label="Start here">
+      <span>Start Here</span>
+      <p>Begin with the complete guide, then jump straight to flights, hotels, rental cars, rewards, nurse perks, or booking tips.</p>
+    </aside>
+  </section>
 
-{% set travelPosts = collections.posts | postsByCategory("Travel Savings") %}
-{% if travelPosts.length %}
-<nav class="archive-index" aria-labelledby="travel-post-index-heading">
-<h2 id="travel-post-index-heading">Travel Savings Post Index</h2>
-<ul>
-{% for post in travelPosts %}
-<li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ul>
-</nav>
-{% endif %}
+  <section class="travel-feature" aria-labelledby="travel-feature-heading">
+    <div class="travel-feature__side">
+      <p class="travel-label">Featured Guide</p>
+      <p class="travel-coordinate">W&amp;S / TRAVEL / 01</p>
+    </div>
+    <div class="travel-feature__main">
+      <h2 id="travel-feature-heading">Complete Travel Savings Guide for Nurses</h2>
+      <p>The main Travel Savings cornerstone guide now combines flight strategy, hotel savings, rental cars, rewards, cashback, nurse discounts, booking fees, and comparison checklists in one easier place.</p>
+      <div class="travel-feature__topics" aria-label="Guide topics">
+        <a href="/2026/06/09/travel-savings-for-nurses/#flights">Flights</a>
+        <a href="/2026/06/09/travel-savings-for-nurses/#hotels">Hotels</a>
+        <a href="/2026/06/09/travel-savings-for-nurses/#rental-cars">Rental Cars</a>
+        <a href="/2026/06/09/travel-savings-for-nurses/#travel-rewards">Rewards</a>
+        <a href="/2026/06/09/travel-savings-for-nurses/#nurse-perks">Nurse Perks</a>
+        <a href="/2026/06/09/travel-savings-for-nurses/#compare-travel-deals">Compare Deals</a>
+      </div>
+      <a class="travel-primary-link" href="/2026/06/09/travel-savings-for-nurses/">Open the Complete Guide</a>
+    </div>
+  </section>
 
+  <section class="travel-hotel-strip" aria-labelledby="travel-hotel-heading">
+    <div>
+      <p class="travel-label">Hotel Focus</p>
+      <h2 id="travel-hotel-heading">Hotel deals, rewards, and free perks have their own guide.</h2>
+    </div>
+    <p>Use this when you specifically want member rates, hotel rewards, free breakfast, late checkout, parking, upgrades, cashback checks, or healthcare-worker discount ideas.</p>
+    <a class="travel-secondary-link" href="/2026/06/10/ways-nurses-can-get-free-hotel-perks/">Read the Hotel Guide</a>
+  </section>
 
+  <section class="travel-asym-grid" aria-labelledby="travel-quick-heading">
+    <div class="travel-asym-grid__large">
+      <p class="travel-label">Looking for something specific?</p>
+      <h2 id="travel-quick-heading">Jump right into the part of the guide you need.</h2>
+    </div>
+    <a href="/2026/06/09/travel-savings-for-nurses/#booking-checklist">Booking Checklist</a>
+    <a href="/2026/06/09/travel-savings-for-nurses/#travel-resources">Travel Resources</a>
+    <a href="/2026/06/10/ways-nurses-can-get-free-hotel-perks/#hotel-rewards">Hotel Rewards</a>
+    <a href="/2026/06/10/ways-nurses-can-get-free-hotel-perks/#free-hotel-perks">Free Hotel Perks</a>
+  </section>
 
-<div class="travel-savings-callout">
-<h2 class="travel-title">Start with the biggest savings</h2>
-
-
-
-<ul>
-<li>Compare flights and lodging before locking in your dates.</li>
-
-
-<li>Join free hotel and airline rewards programs before you book.</li>
-
-
-<li>Ask about healthcare worker rates and flexible cancellation policies.</li>
-
-
-<li>Check the total price, including baggage, parking, taxes, and resort fees.</li>
-</ul>
+  <section class="travel-note-panel" aria-labelledby="travel-note-heading">
+    <div class="travel-note-panel__mark" aria-hidden="true">*</div>
+    <div>
+      <p class="travel-label">How this category works now</p>
+      <h2 id="travel-note-heading">Fewer posts. Stronger answers.</h2>
+    </div>
+    <p>Travel Savings is now organized around cornerstone guides instead of several overlapping articles. Future travel posts should only be separate when the topic has a genuinely different purpose, search intent, or update cycle.</p>
+  </section>
 </div>
-
-
-
-<h2 class="travel-title">Smart ways to save on every trip</h2>
-
-
-
-<div class="content-columns">
-<div class="content-column">
-<h3 class="travel-title">✈️ Flights</h3>
-
-
-<p>Use fare alerts, compare nearby airports, and check whether a carry-on or checked bag changes the real cost.</p>
-
-
-<h3 class="travel-title">🏨 Hotels</h3>
-
-
-<p>Compare member rates, healthcare discounts, free breakfast, parking, and cancellation terms before booking.</p>
-
-
-<h3 class="travel-title">🚗 Rental Cars</h3>
-
-
-<p>Price the full rental, review fuel and toll policies, and recheck the rate as your travel date approaches.</p>
-</div>
-
-
-
-<div class="content-column">
-<h3 class="travel-title">🎟️ Attractions</h3>
-
-
-<p>Look for advance-purchase prices, city passes, healthcare discounts, and free museum days.</p>
-
-
-<h3 class="travel-title">💳 Travel Rewards</h3>
-
-
-<p>Use points carefully, compare cash value, and avoid spending more simply to earn a reward.</p>
-
-
-<h3 class="travel-title">📱 Helpful Apps</h3>
-
-
-<p>Keep itineraries organized and use trusted tools for fare tracking, maps, gas prices, and cashback.</p>
-</div>
-</div>
-
-
-
-<hr  />
-
-
-
-<h2 class="travel-title">Featured travel guides</h2>
-
-
-
-<p><strong>Travel Savings for Nurses</strong><br>Explore practical ways to save on flights, hotels, rental cars, attractions, rewards, and travel apps.</p>
-
-
-
-<div class="button-row">
-<div class="button-shell"><a class="button" href="/2026/06/09/travel-savings-for-nurses/">Read the travel savings guide</a></div>
-</div>
-
-
-
-<p><strong>Ways Nurses Can Get Free Hotel Perks</strong><br>Learn how to ask for healthcare rates, complimentary upgrades, free breakfast, late checkout, and other hotel benefits.</p>
-
-
-
-<div class="button-row">
-<div class="button-shell"><a class="button" href="/2026/06/10/ways-nurses-can-get-free-hotel-perks/">See the hotel perks</a></div>
-</div>
-
-
-
-<h2 class="travel-title">Before you book</h2>
-
-
-
-<ul>
-<li>Confirm the cancellation and change policy.</li>
-
-
-<li>Compare the final price, not just the advertised rate.</li>
-
-
-<li>Ask whether a nurse or healthcare worker discount is available.</li>
-
-
-<li>Check your employer, professional association, and existing memberships for travel benefits.</li>
-
-
-<li>Keep confirmation numbers and receipts together for easy access.</li>
-</ul>
-
-
-
-<p><em>Travel offers and eligibility can change. Always review the provider's current terms before booking.</em></p>
