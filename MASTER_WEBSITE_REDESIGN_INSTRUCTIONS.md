@@ -2,6 +2,8 @@
 
 Treat the following as permanent project-wide instructions for every change you make to the Wealth & Scrubs website.
 
+Before changing category pages, post templates, article theme styling, or the site-wide color system, also read `CATEGORY_COLOR_SYSTEM.md` and preserve the category-based palette and inheritance rules there.
+
 ## 1. Overall Goal
 
 Wealth & Scrubs should look like a legitimate, polished, modern brand — not a generic blog or a website filled with affiliate links.

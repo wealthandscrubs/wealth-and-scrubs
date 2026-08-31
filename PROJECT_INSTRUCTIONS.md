@@ -5,6 +5,7 @@
 
 ## Codex Design Rule
 - Before making any design, layout, navigation, visual, or CSS changes, read `WEALTH_AND_SCRUBS_DESIGN_GUIDE.md` and follow it unless the site owner explicitly asks for a different direction.
+- Before redesigning category pages, article templates, category-specific sections, or the site-wide color system, also read `CATEGORY_COLOR_SYSTEM.md` and apply the category-based palettes consistently.
 
 ## Website Management Goals
 - Increase qualified organic and social traffic.
@@ -41,7 +42,11 @@ Nurses and everyday people looking to save money.
 - Money & Side Hustles
 - Nursing Life
 - Lifestyle & Self Care
-- Home & Organization
+- Home & Organization / Organization & Productivity
+- Freebies / Digital Downloads
+- Shop / Wealth & Scrubs Products
+
+Current live category names and URLs should remain stable unless the site owner explicitly asks to rename or restructure them. Use `CATEGORY_COLOR_SYSTEM.md` to guide category palette work, including planned categories that do not yet have dedicated live pages.
 
 ## Internal Linking Rules
 - Internal linking is a permanent site-wide requirement for Wealth & Scrubs.

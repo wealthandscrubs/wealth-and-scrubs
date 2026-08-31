@@ -3,3 +3,9 @@ node_modules/
 .DS_Store
 .cache/
 $CODEX_HOME/
+.wrangler/
+output/
+tmp/
+continue-export/
+WealthandScrubs-Backups/
+*.dmg

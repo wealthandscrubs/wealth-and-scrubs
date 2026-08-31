@@ -1,0 +1,11 @@
+<article class="editorial-card{% if cardClass %} {{ cardClass }}{% endif %}">
+  <a class="editorial-card__image" href="{{ card.url }}" aria-label="Read {{ card.title }}">
+    <img src="{{ card.image }}" alt="{{ card.imageAlt or card.title }}" loading="lazy">
+  </a>
+  <div class="editorial-card__body">
+    {% if card.kicker %}<p class="editorial-card__kicker">{{ card.kicker }}</p>{% endif %}
+    <h3><a href="{{ card.url }}">{{ card.title }}</a></h3>
+    <p>{{ card.excerpt }}</p>
+    <a class="read-more-link" href="{{ card.url }}">Read More</a>
+  </div>
+</article>

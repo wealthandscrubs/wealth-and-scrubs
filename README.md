@@ -4,11 +4,18 @@ This is the static version of Wealth & Scrubs. It uses Eleventy to turn simple c
 
 ## Site Contents
 
-- 16 published posts
+- 35 published posts
 - 9 published pages
-- 30 original media files
+- 36 site upload media files, plus product and Pinterest creative assets
 - Existing post URLs, categories, links, and affiliate disclosures
 - Responsive image optimization, RSS, sitemap, and mobile navigation
+
+## Current Project References
+
+- `MASTER_WEBSITE_REDESIGN_INSTRUCTIONS.md` is the governing redesign standard.
+- `WEALTH_AND_SCRUBS_DESIGN_GUIDE.md` defines the overall visual system.
+- `CATEGORY_COLOR_SYSTEM.md` defines category-based palettes and inheritance rules for future redesign work.
+- `PROJECT_FILE_MANIFEST.md` identifies active project assets and cleanup rules.
 
 ## Create a Post
 

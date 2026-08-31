@@ -55,6 +55,8 @@ Avoid:
 
 Use the existing CSS variables in `src/assets/css/site.css` as the source of truth.
 
+For category-specific redesigns, article themes, and site-wide category color tokens, also use `CATEGORY_COLOR_SYSTEM.md` as the source of truth for category palette assignments and inheritance rules.
+
 Primary darks:
 
 - `--paper: #090809` for the page background.
