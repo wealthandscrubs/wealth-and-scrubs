@@ -63,7 +63,12 @@ The Nursing Life homepage was redesigned as a compact editorial gateway, not a l
 - A featured guide area for the Nursing Essentials & Shift Survival Guide.
 - Asymmetrical sections for Career & Work, Shift Life, Nurse Money, Organization, Discounts & Perks, Self-Care, and Resources.
 - Nursing Life palette styling using deep plum, mauve, rose quartz, soft lavender, champagne gold, warm cream, and optional dark plum.
-- Selective use of the existing Nursing Life image rather than random stock imagery.
+- A custom generated Nursing Life category image saved at `src/assets/uploads/nursing-life-category-hero.png`.
+- The old Pinterest-style Nursing Life image was removed from the category homepage.
+- The duplicate default page hero was removed from the Nursing Life homepage so the page no longer says `Nursing Life` twice at the top.
+- The `Explore Nursing Life` index was moved above the image and styled as compact separated links.
+- Headings and subheadings on the Nursing Life hub were centered and softened with a two-tone purple treatment.
+- Lavender and light-purple surfaces were added to reduce the white space while keeping the page polished.
 
 ## External Link Audit Notes
 
@@ -100,6 +105,7 @@ Links that tested OK in this run include Verizon Nurses, Carla Car Rental, South
 ## Testing Status
 
 - `pnpm build` passed after the Nursing Life remodel.
+- `pnpm build` passed again after the user-requested lavender, image, heading, and index refinements.
 - The active post count updated from 31 to 29 after consolidating two overlapping posts.
 - The retained guide includes a compact `Jump to What You Need` index.
 - A clean build was run after deleting `_site`, so stale retired pages were not kept in generated output.
@@ -107,5 +113,6 @@ Links that tested OK in this run include Verizon Nurses, Carla Car Rental, South
 - All generated internal links and anchors resolve across 45 HTML files.
 - All `_redirects` destinations resolve, including fragment anchors.
 - Nursing Life homepage index links and Nursing Essentials guide jump links were checked.
+- Exact-phrase web searches were run against the revised Nursing Life homepage copy, and the returned results were unrelated.
 - Desktop, tablet, and mobile responsive CSS rules were added for the Nursing Life homepage and the retained guide.
 - Browser screenshot testing is limited in this local environment because `npx` is not available, so final visual confirmation should use live browser review after deployment.
