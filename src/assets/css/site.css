@@ -27,6 +27,7 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 96px;
+  overflow-x: clip;
 }
 
 body {
@@ -36,7 +37,15 @@ body {
   font-family: var(--font-hand);
   font-size: 1.05rem;
   line-height: 1.72;
+  overflow-x: clip;
   text-rendering: optimizeLegibility;
+}
+
+@supports not (overflow: clip) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
 }
 
 img { display: block; max-width: 100%; height: auto; }
