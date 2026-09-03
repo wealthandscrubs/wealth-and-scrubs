@@ -16,7 +16,7 @@ This file is synchronized from `src/posts/` before every build.
 | 2026-06-23 | [Healthy Lunch Ideas for 12-Hour Shifts](/2026/06/23/healthy-lunch-ideas-for-12-hour-shifts/) | Lifestyle & Self-Care, Nursing Life | 420 | No |
 | 2026-06-23 | [How Nurses Can Prevent Burnout](/2026/06/23/how-nurses-can-prevent-burnout/) | Lifestyle & Self-Care, Nursing Life | 423 | No |
 | 2026-06-23 | [Mental Health for Nurses: Warning Signs, Support, and Small Steps That Matter](/2026/06/23/mental-health-for-nurses/) | Nursing Life, Lifestyle & Self-Care | 652 | No |
-| 2026-06-23 | [Nursing Essentials & Shift Survival Guide](/2026/06/23/affordable-nurse-must-haves/) | Nursing Life, Lifestyle & Self-Care, Deals & Discounts | 1928 | No |
+| 2026-06-23 | [Nursing Essentials & Shift Survival Guide](/2026/06/23/affordable-nurse-must-haves/) | Nursing Life, Lifestyle & Self-Care, Deals & Discounts | 1965 | No |
 | 2026-06-23 | [Relaxation Tips for Busy Nurses](/2026/06/23/relaxation-tips-for-busy-nurses/) | Lifestyle & Self-Care, Nursing Life | 335 | No |
 | 2026-06-23 | [Self-Care Ideas After a 12-Hour Shift](/2026/06/23/self-care-ideas-after-a-12-hour-shift/) | Lifestyle & Self-Care, Nursing Life | 371 | No |
 | 2026-06-23 | [Small Space Organization Ideas](/2026/06/23/small-space-organization-ideas/) | Lifestyle & Self-Care, Home & Organization | 154 | No |

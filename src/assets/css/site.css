@@ -2925,6 +2925,12 @@ body:has(.nursing-essentials-guide) .post-shell {
   font-weight: 800;
 }
 
+.nursing-product-card__price::before {
+  content: "Price idea: ";
+  color: var(--nurse-mauve);
+  font-weight: 900;
+}
+
 .nursing-essentials-guide ul {
   width: min(780px, 100%);
   margin-right: auto;
