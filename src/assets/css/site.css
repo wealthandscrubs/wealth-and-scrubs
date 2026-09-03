@@ -1203,6 +1203,7 @@ span.cashback-app-chip {
 .footer-inner strong { color: var(--white); font-size: 1.45rem; }
 .footer-inner nav { display: flex; flex-wrap: wrap; gap: 18px; margin: 25px 0; }
 .footer-inner a { color: var(--white); }
+.site-footer__affiliate { margin: 0 0 10px; font-size: 0.86rem; color: rgb(255 255 255 / 72%); }
 .copyright { margin-bottom: 0; font-size: 0.82rem; }
 
 .sr-only {
