@@ -118,12 +118,14 @@ Use:
 - Clear section headings and useful groupings.
 - Content-first layouts with obvious next actions.
 - Mobile layouts that collapse gracefully to one column.
+- Visual variety that stays organized: different widths, selective emphasis, occasional side-by-side content, text links, smaller feature areas, intentional whitespace, and left/center/right movement when it serves the page.
 
 Avoid:
 
 - Landing-page fluff before the actual content.
 - Overly large empty hero areas that hide the useful content.
 - Nested cards inside cards.
+- Repetitive same-size card or box layouts throughout the site unless there is a functional reason for them.
 - Layouts where text, buttons, or images overlap.
 - Components that resize or shift when hovered.
 - Hidden navigation or unclear next steps.

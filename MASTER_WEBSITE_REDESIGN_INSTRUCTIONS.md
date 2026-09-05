@@ -137,6 +137,10 @@ Do not make titles unnecessarily large.
 
 Avoid oversized rounded buttons and oversized cards.
 
+Avoid repetitive same-size card/box layouts throughout the site unless there is a functional reason for them.
+
+Use visual variety while still keeping the site organized: vary widths, use selective emphasis, occasional side-by-side content, text links, smaller feature areas, intentional whitespace, and layouts that can move left, center, or right instead of defaulting to grids of identical cards.
+
 Do not randomly introduce new fonts, colors, layouts, or design styles.
 
 Any new feature I create in the future should automatically follow the Wealth & Scrubs design system.
