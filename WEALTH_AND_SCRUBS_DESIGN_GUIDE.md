@@ -106,6 +106,11 @@ Typography rules:
 - Do not scale font size directly with viewport width outside established `clamp()` patterns.
 - Long titles must wrap cleanly on mobile.
 
+
+## Category Page Design Rule
+
+Consistent brand does not mean identical page design. Major Wealth & Scrubs sections should share the logo, colors, typography, navigation, button styling, polish, and responsive standards, but each major category page needs its own visual concept based on the subject. Money & Side Hustles can feel action-oriented and financial, Deals & Discounts can feel discovery-oriented, Nursing Life can feel shift/lifestyle focused, Travel Savings can feel exploratory, Lifestyle & Self-Care can feel calmer and editorial, and Home & Organization can feel structured and practical. Before redesigning a major category, decide what should make that page visually different from the others.
+
 ## Layout Principles
 
 Design for quick scanning and useful paths.

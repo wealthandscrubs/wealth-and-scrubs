@@ -13,14 +13,14 @@ layout: layouts/base.njk
         </div>
       </div>
     </header>
-  {% elif slug != "nursing-life" %}
+  {% elif slug != "nursing-life" and slug != "money-side-hustles" %}
     <header class="page-hero">
       <p class="eyebrow">{{ eyebrow or site.name }}</p>
       <h1>{{ title }}</h1>
       {% if description %}<p>{{ description }}</p>{% endif %}
     </header>
   {% endif %}
-  <div class="{% if slug == "home" %}home-content{% elif slug == "money-side-hustles" %}money-hub-content{% elif slug == "nursing-life" %}nursing-hub-content{% else %}content prose{% endif %}">
+  <div class="{% if slug == "home" %}home-content{% elif slug == "money-side-hustles" %}money-action-content{% elif slug == "nursing-life" %}nursing-hub-content{% else %}content prose{% endif %}">
     {{ content | safe }}
   </div>
 </article>

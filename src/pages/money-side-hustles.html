@@ -4,139 +4,168 @@ title: "MONEY & SIDE HUSTLES"
 slug: "money-side-hustles"
 date: 2026-06-02
 permalink: "/money-side-hustles/index.html"
-description: "Save money, earn extra income, manage everyday finances, compare rewards, and find realistic tools that fit busy nurse-life schedules."
-excerpt: "A Wealth & Scrubs hub for saving money, earning extra income, managing money, credit, banking, investing, rewards, and online income."
+description: "Earn more, keep more, and find practical Wealth & Scrubs money guides for saving, side hustles, cashback, credit, banking, and beginner investing."
+excerpt: "A Wealth & Scrubs money hub for saving more, earning extra income, building better money habits, and finding useful financial resources without overwhelm."
 author: "Brooke | Wealth & Scrubs"
 categories: []
 tags: ["page"]
 ---
-{% set moneyPaths = [
-  {
-    icon: "💵",
-    title: "Saving Money",
-    summary: "Lower everyday costs with grocery savings, shopping strategies, discounts, cashback, and small habits that add up.",
-    url: "/2026/06/07/10-money-saving-apps/"
-  },
-  {
-    icon: "💼",
-    title: "Side Hustles",
-    summary: "Realistic ways to make extra money around work, nursing shifts, family, school, or another busy schedule.",
-    url: "/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/"
-  },
-  {
-    icon: "🧾",
-    title: "Budgeting & Managing Money",
-    summary: "Paycheck planning, expense tracking, savings goals, and calmer everyday money routines.",
-    missing: true
-  },
-  {
-    icon: "💳",
-    title: "Credit & Banking",
-    summary: "Credit scores, credit-building basics, banking fees, savings accounts, and simple account decisions.",
-    missing: true
-  },
-  {
-    icon: "📈",
-    title: "Investing & Growing Money",
-    summary: "Beginner-friendly investing basics explained clearly without hype or guaranteed-return promises.",
-    url: "/2026/06/02/how-nurses-can-start-investing-with-just-50/"
-  },
-  {
-    icon: "🎁",
-    title: "Cash Back, Rewards & Freebies",
-    summary: "Cashback apps, receipt apps, loyalty rewards, freebies, promotions, and legitimate ways to earn back.",
-    url: "/2026/06/02/best-cashback-apps-for-nurses-in-2026/"
-  },
-  {
-    icon: "💻",
-    title: "Make Money Online",
-    summary: "Digital products, affiliate marketing, freelancing, content creation, online marketplaces, and printables.",
-    url: "/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/"
-  }
-] %}
+<div class="money-action-page">
+  <section class="money-action-hero" aria-labelledby="money-action-title">
+    <div class="money-action-hero__marker">Money moves for busy lives</div>
+    <h1 id="money-action-title">MONEY &amp; SIDE HUSTLES</h1>
+    <p>Earn more. Keep more. Make your money work harder.</p>
+    <nav class="money-action-hero__links" aria-label="Money page shortcuts">
+      <a href="#need-now">Pick a starting point</a>
+      <a href="#quick-wins">Start small today</a>
+      <a href="#extra-money">Find extra-money ideas</a>
+    </nav>
+  </section>
 
-{% set featuredGuides = [
-  {
-    title: "Side Hustles Nurses Can Start This Weekend",
-    reason: "A practical first stop for extra-income ideas that can fit around a busy schedule.",
-    url: "/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/"
-  },
-  {
-    title: "Money Saving Apps Every Nurse Needs",
-    reason: "Useful for app-based savings on shopping, groceries, rewards, and everyday spending.",
-    url: "/2026/06/07/10-money-saving-apps/"
-  },
-  {
-    title: "Ways to Save Money on Groceries",
-    reason: "A simple guide for cutting one of the easiest bills to overspend on.",
-    url: "/2026/06/17/ways-to-save-money-on-groceries/"
-  },
-  {
-    title: "How Nurses Can Start Investing With Just $50",
-    reason: "A beginner-friendly money-growth guide for learning the basics without pressure.",
-    url: "/2026/06/02/how-nurses-can-start-investing-with-just-50/"
-  }
-] %}
+  <section class="money-intent-flow" id="need-now" aria-labelledby="money-intent-heading">
+    <div class="money-intent-flow__intro">
+      <p class="eyebrow">What Do You Need Right Now?</p>
+      <h2 id="money-intent-heading">Choose the money problem you want to handle first.</h2>
+    </div>
 
-<section class="money-hub-intro" aria-label="Money and Side Hustles introduction">
-  <p>Start with the money move that fits your life right now: save on everyday spending, find realistic extra income, learn the basics, or compare rewards before you sign up.</p>
-  <a class="money-hub-cta" href="#choose-money-path">Choose a money path</a>
-</section>
+    <div class="money-intent money-intent--save">
+      <span class="money-intent__number">01</span>
+      <div>
+        <h3>I Need to Save Money</h3>
+        <p>For the week when groceries, bills, subscriptions, and random charges are doing too much.</p>
+      </div>
+      <ul>
+        <li><a href="/2026/06/17/ways-to-save-money-on-groceries/">Grocery savings</a></li>
+        <li><a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Cashback apps</a></li>
+        <li><a href="/2026/06/07/10-money-saving-apps/">Money-saving apps</a></li>
+        <li><a href="/category/deals-discounts/">Deals &amp; discounts</a></li>
+      </ul>
+    </div>
 
-<section class="money-hub-section" id="choose-money-path" aria-labelledby="choose-money-path-heading">
-  <div class="section-heading section-heading--centered">
-    <p class="eyebrow">Choose Your Money Path</p>
-    <h2 id="choose-money-path-heading">Find the guide that matches your next move.</h2>
-  </div>
-  <div class="money-path-grid">
-    {% for path in moneyPaths %}
-      {% if path.url %}
-        <a class="money-path-card" href="{{ path.url }}">
-          <span class="money-path-card__icon" aria-hidden="true">{{ path.icon }}</span>
-          <span class="money-path-card__body">
-            <span class="money-path-card__title">{{ path.title }}</span>
-            <span class="money-path-card__summary">{{ path.summary }}</span>
-            <span class="money-path-card__link">Explore →</span>
-          </span>
-        </a>
-      {% else %}
-        <article class="money-path-card money-path-card--unlinked">
-          <span class="money-path-card__icon" aria-hidden="true">{{ path.icon }}</span>
-          <span class="money-path-card__body">
-            <span class="money-path-card__title">{{ path.title }}</span>
-            <span class="money-path-card__summary">{{ path.summary }}</span>
-          </span>
-        </article>
-      {% endif %}
-    {% endfor %}
-  </div>
-</section>
+    <div class="money-intent money-intent--earn">
+      <span class="money-intent__number">02</span>
+      <div>
+        <h3>I Need to Make More Money</h3>
+        <p>Extra money does not have to mean signing your life away to another full-time job.</p>
+      </div>
+      <ul>
+        <li><a href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Side-hustle ideas</a></li>
+        <li><a href="/2026/06/08/best-survey-apps-that-actually-pay-real-money/">Survey apps</a></li>
+        <li><a href="#extra-money">Flexible income paths</a></li>
+        <li><a href="/nursing-life/">Nurse-life resources</a></li>
+      </ul>
+    </div>
 
-<section class="money-hub-section" aria-labelledby="money-featured-heading">
-  <div class="section-heading section-heading--centered">
-    <p class="eyebrow">Start Here</p>
-    <h2 id="money-featured-heading">Popular Money Guides</h2>
-  </div>
-  <div class="money-featured-grid">
-    {% for guide in featuredGuides %}
-      <article class="money-featured-card">
-        <h3>{{ guide.title }}</h3>
-        <p>{{ guide.reason }}</p>
-        <a class="read-more-link" href="{{ guide.url }}">Read Guide</a>
+    <div class="money-intent money-intent--foundation">
+      <span class="money-intent__number">03</span>
+      <div>
+        <h3>I Need to Get My Money Together</h3>
+        <p>Start with the basics: what is coming in, what is going out, what needs fixing, and what can grow.</p>
+      </div>
+      <ul>
+        <li><a href="#money-basics">Budgeting basics</a></li>
+        <li><a href="#money-basics">Credit &amp; banking</a></li>
+        <li><a href="/2026/06/02/how-nurses-can-start-investing-with-just-50/">Beginner investing</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="money-quick-strip" id="quick-wins" aria-labelledby="money-quick-heading">
+    <div>
+      <p class="eyebrow">Start Small</p>
+      <h2 id="money-quick-heading">One useful move still counts.</h2>
+    </div>
+    <ul>
+      <li>Check where your money went this week.</li>
+      <li>Cancel one subscription you are not using.</li>
+      <li>Compare a bill before automatically paying it.</li>
+      <li>Use cashback on something you already planned to buy.</li>
+      <li>Look at one realistic side hustle instead of signing up for ten.</li>
+    </ul>
+  </section>
+
+  <section class="money-side-feature" id="extra-money" aria-labelledby="money-side-heading">
+    <div class="money-side-feature__copy">
+      <p class="eyebrow">Need Extra Money?</p>
+      <h2 id="money-side-heading">Pick the kind of side money that matches your actual time.</h2>
+      <p>Busy schedules need honest options. Start with one income idea that fits your week, then decide if it is worth repeating.</p>
+      <a class="money-text-link" href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Read the side-hustle guide</a>
+    </div>
+    <div class="money-side-feature__timeline" aria-label="Side hustle time options">
+      <article>
+        <span>30 minutes</span>
+        <h3>Small tasks</h3>
+        <p>Surveys, reward opportunities, simple app-based tasks, and quick checks that do not take over the day.</p>
+        <a href="/2026/06/08/best-survey-apps-that-actually-pay-real-money/">Compare survey apps</a>
       </article>
-    {% endfor %}
-  </div>
-</section>
+      <article>
+        <span>A few hours</span>
+        <h3>Flexible work</h3>
+        <p>Gig work, shift-friendly extra work, and realistic side jobs that can fit around changing schedules.</p>
+        <a href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Explore flexible ideas</a>
+      </article>
+      <article>
+        <span>Build over time</span>
+        <h3>Owned income</h3>
+        <p>Digital products, affiliate content, printables, and creator work that take more patience but can become assets.</p>
+        <a href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Start with the basics</a>
+      </article>
+    </div>
+  </section>
 
-<section class="money-hub-section money-related-hubs" aria-labelledby="money-related-hubs-heading">
-  <div>
-    <p class="eyebrow">Keep Exploring</p>
-    <h2 id="money-related-hubs-heading">Related Wealth &amp; Scrubs Sections</h2>
-    <p>Some money-saving topics live in other parts of the site when that is where they fit best.</p>
-  </div>
-  <nav class="money-related-hubs__links" aria-label="Related Wealth and Scrubs sections">
-    <a href="/category/deals-discounts/">Deals &amp; Discounts</a>
-    <a href="/nursing-life/">Nursing Life</a>
-    <a href="/resources/">Travel Savings</a>
-  </nav>
-</section>
+  <section class="money-save-panel" aria-labelledby="money-save-heading">
+    <div class="money-save-panel__statement">
+      <p class="eyebrow">Keep More of What You Earn</p>
+      <h2 id="money-save-heading">Your paycheck has enough jobs already.</h2>
+      <p>Use the savings content here when you want practical ways to reduce spending without turning your whole life into a spreadsheet.</p>
+    </div>
+    <div class="money-save-panel__links" aria-label="Money-saving topics">
+      <a href="/2026/06/17/ways-to-save-money-on-groceries/">Groceries</a>
+      <a href="/2026/06/02/nursediscounts/">Bills &amp; discounts</a>
+      <a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Cashback</a>
+      <a href="/2026/06/07/10-money-saving-apps/">Shopping apps</a>
+      <a href="/category/deals-discounts/">Deals</a>
+      <a href="/resources/">Travel savings</a>
+    </div>
+  </section>
+
+  <section class="money-foundation" id="money-basics" aria-labelledby="money-foundation-heading">
+    <div class="money-foundation__heading">
+      <p class="eyebrow">Money Basics</p>
+      <h2 id="money-foundation-heading">Build a stronger money foundation.</h2>
+    </div>
+    <div class="money-foundation__columns">
+      <div>
+        <h3>Budgeting</h3>
+        <p>Know what is coming in, what is already spoken for, and what needs a boundary.</p>
+      </div>
+      <div>
+        <h3>Credit</h3>
+        <p>Learn the habits that support better credit decisions before signing up for something new.</p>
+      </div>
+      <div>
+        <h3>Banking</h3>
+        <p>Watch fees, compare account benefits, and keep your daily money easier to manage.</p>
+      </div>
+      <div>
+        <h3>Saving</h3>
+        <p>Small savings still count when they make your next week less stressful.</p>
+      </div>
+      <div>
+        <h3>Beginner Investing</h3>
+        <p><a href="/2026/06/02/how-nurses-can-start-investing-with-just-50/">Start with beginner-friendly investing basics</a> before chasing trends.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="money-guide-row" aria-labelledby="money-guide-row-heading">
+    <p class="eyebrow">Useful Next Reads</p>
+    <h2 id="money-guide-row-heading">Guides worth opening first.</h2>
+    <div class="money-guide-row__links">
+      <a href="/2026/06/07/10-money-saving-apps/">Money Saving Apps Every Nurse Needs</a>
+      <a href="/2026/06/02/best-cashback-apps-for-nurses-in-2026/">Cashback Apps &amp; Sites</a>
+      <a href="/2026/06/17/ways-to-save-money-on-groceries/">Ways to Save Money on Groceries</a>
+      <a href="/2026/06/02/15-side-hustles-nurses-can-start-this-weekend/">Side Hustles Nurses Can Start This Weekend</a>
+    </div>
+  </section>
+</div>
