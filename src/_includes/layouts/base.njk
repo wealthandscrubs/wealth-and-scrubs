@@ -76,19 +76,25 @@
           <img class="brand-mark" src="/assets/uploads/wealth-and-scrubs-icon-192.png" alt="" width="48" height="48">
           <span class="brand-copy">
             <span>{{ site.name }}</span>
-            <small>{{ site.tagline }}</small>
+            <small>Nurses. Money. A brighter you.</small>
           </span>
         </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span>Menu</span>
-          <span class="nav-toggle__icon" aria-hidden="true"></span>
-        </button>
-        <nav id="site-nav" class="site-nav" aria-label="Main navigation">
-          <p class="site-nav__label">Explore Wealth &amp; Scrubs</p>
-          {% for item in navigation %}
-            <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
-          {% endfor %}
-        </nav>
+        <div class="header-menu">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span>Menu</span>
+            <span class="nav-toggle__icon" aria-hidden="true"></span>
+          </button>
+          <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+            <p class="site-nav__label">Explore Wealth &amp; Scrubs</p>
+            {% for item in navigation %}
+              <a href="{{ item.url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+            {% endfor %}
+          </nav>
+          <a class="header-search" href="/blog/" aria-label="Browse Wealth & Scrubs posts">
+            <span aria-hidden="true">⌕</span>
+          </a>
+          <a class="header-cta" href="/#join-community">Let's Thrive <span aria-hidden="true">♡</span></a>
+        </div>
       </div>
     </header>
 
@@ -98,20 +104,43 @@
 
     <footer class="site-footer">
       <div class="footer-inner">
-        <div>
-          <strong>{{ site.name }}</strong>
-          <p>{{ site.description }}</p>
+        <div class="footer-community">
+          <div>
+            <p class="footer-script">Dream. Plan. Do. Repeat.</p>
+            <p>Practical ideas, helpful resources, and a little sparkle for building more freedom on and off the clock.</p>
+          </div>
+          <figure>
+            <img src="/assets/uploads/wealth-scrubs-crown-stethoscope-hero.png" alt="Rose-gold stethoscope and jeweled crown on burgundy satin">
+          </figure>
         </div>
-        <nav aria-label="Footer navigation">
-          <a href="/about/">About</a>
-          <a href="/contact/">Contact</a>
-          <a href="https://t.me/WealthandScrubs" target="_blank" rel="noopener">Telegram</a>
-          <a href="https://x.com/wealthandscrubs?s=11" target="_blank" rel="noopener">X</a>
-          <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
-          <a href="/privacy-policy/">Privacy Policy</a>
-        </nav>
-        <p class="site-footer__affiliate">As an Amazon Associate I earn from qualifying purchases.</p>
-        <p class="copyright">&copy; {% year %} {{ site.name }}. All rights reserved.</p>
+        <div class="footer-grid">
+          <nav aria-label="Quick links">
+            <h2>Quick Links</h2>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/money-side-hustles/">Money &amp; Side Hustles</a>
+            <a href="/category/deals-discounts/">Deals &amp; Discounts</a>
+            <a href="/nursing-life/">Nursing Life</a>
+            <a href="/resources/">Travel Savings</a>
+          </nav>
+          <nav aria-label="Helpful information">
+            <h2>Helpful Info</h2>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/privacy-policy/">Privacy Policy</a>
+            <a href="/terms-and-conditions/">Terms &amp; Conditions</a>
+            <a href="/affiliate-disclosure/">Affiliate Disclosure</a>
+            <a href="/disclaimer/">Disclaimer</a>
+          </nav>
+          <nav aria-label="Social links">
+            <h2>Connect</h2>
+            <a href="https://t.me/WealthandScrubs" target="_blank" rel="noopener">Telegram</a>
+            <a href="https://x.com/wealthandscrubs?s=11" target="_blank" rel="noopener">X</a>
+            <a href="/contact/">Email</a>
+          </nav>
+        </div>
+        <p class="site-footer__affiliate">As an Amazon Associate I earn from qualifying purchases. Some links may also be affiliate links, which means Wealth &amp; Scrubs may earn a commission at no extra cost to you.</p>
+        <p class="copyright">&copy; {% year %} {{ site.name }}. All rights reserved. Because you do so much, you deserve more.</p>
       </div>
     </footer>
     <script src="/assets/js/site.js" defer></script>

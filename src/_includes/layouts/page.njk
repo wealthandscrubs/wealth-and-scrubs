@@ -2,18 +2,7 @@
 layout: layouts/base.njk
 ---
 <article class="page-shell">
-  {% if slug == "home" %}
-    <header class="home-hero" aria-labelledby="home-title">
-      <div class="home-hero__copy">
-        <p class="eyebrow">Wealth &amp; Scrubs</p>
-        <h1 id="home-title">Luxury nurse energy. Real money moves.</h1>
-        <p class="home-hero__summary">A polished hub for nurse life, saving smarter, thoughtful deals, side income, travel, and everyday ease.</p>
-        <div class="hero-actions" aria-label="Homepage starting points">
-          <a class="primary-button" href="#start-exploring">Start exploring</a>
-        </div>
-      </div>
-    </header>
-  {% elif slug != "nursing-life" and slug != "money-side-hustles" %}
+  {% if slug != "home" and slug != "nursing-life" and slug != "money-side-hustles" %}
     <header class="page-hero">
       <p class="eyebrow">{{ eyebrow or site.name }}</p>
       <h1>{{ title }}</h1>

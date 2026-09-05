@@ -1,11 +1,9 @@
 [
-  { "label": "🏠 Home", "url": "/" },
-  { "label": "💰 Money & Side Hustles", "url": "/money-side-hustles/" },
-  { "label": "🛒 Deals & Discounts", "url": "/category/deals-discounts/" },
-  { "label": "🩺 Nursing Life", "url": "/nursing-life/" },
-  { "label": "✈️ Travel Savings", "url": "/resources/" },
-  { "label": "💗 Lifestyle & Self-Care", "url": "/lifestyle-self-care/" },
-  { "label": "🏡 Home & Organization", "url": "/category/home-organization/" },
-  { "label": "✨ About", "url": "/about/" },
-  { "label": "✉️ Contact", "url": "/contact/" }
+  { "label": "Home", "url": "/" },
+  { "label": "Money & Side Hustles", "url": "/money-side-hustles/" },
+  { "label": "Deals & Discounts", "url": "/category/deals-discounts/" },
+  { "label": "Nursing Life", "url": "/nursing-life/" },
+  { "label": "Travel Savings", "url": "/resources/" },
+  { "label": "Resources", "url": "/#featured-resources" },
+  { "label": "Shop", "url": "/#shop-wealth-scrubs" }
 ]
