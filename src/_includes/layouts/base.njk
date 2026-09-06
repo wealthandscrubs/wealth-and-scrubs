@@ -13,7 +13,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/uploads/wealth-and-scrubs-icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/uploads/wealth-and-scrubs-icon-512.png">
     <link rel="apple-touch-icon" href="/assets/uploads/apple-touch-icon.png">
-    <link rel="stylesheet" href="/assets/css/site.css?v=20260901-responsive-fit">
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260906-home-final">
     <link rel="alternate" type="application/atom+xml" title="{{ site.name }}" href="/feed.xml">
     <meta property="og:site_name" content="{{ site.name }}">
     <meta property="og:title" content="{% if title and title != site.name %}{{ title }} | {{ site.name }}{% elif category %}{{ category.name }} | {{ site.name }}{% else %}{{ site.name }}{% endif %}">
@@ -110,7 +110,11 @@
             <p>Practical ideas, helpful resources, and a little sparkle for building more freedom on and off the clock.</p>
           </div>
           <figure>
-            <img src="/assets/uploads/wealth-scrubs-crown-stethoscope-hero.png" alt="Rose-gold stethoscope and jeweled crown on burgundy satin">
+            {% if page.url == "/" %}
+              <img src="/assets/uploads/nursing-life-category-hero.png" alt="Rose-gold stethoscope and nursing essentials on a blush satin-toned surface" loading="eager" sizes="(max-width: 940px) calc(100vw - 36px), 620px">
+            {% else %}
+              <img src="/assets/uploads/wealth-scrubs-crown-stethoscope-hero.png" alt="Rose-gold stethoscope and jeweled crown on burgundy satin">
+            {% endif %}
           </figure>
         </div>
         <div class="footer-grid">
