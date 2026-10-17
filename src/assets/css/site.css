@@ -4311,12 +4311,14 @@ body:has(.nursing-essentials-guide) .post-shell {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.8fr;
-  gap: clamp(24px, 5vw, 70px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: clamp(12px, 4vw, 70px);
   padding: 28px 0 20px;
 }
 
 .footer-grid nav {
+  min-width: 0;
+  overflow-wrap: anywhere;
   display: grid;
   align-content: start;
   gap: 8px;
@@ -4448,8 +4450,7 @@ body:has(.nursing-essentials-guide) .post-shell {
   .home-luxe-hero,
   .home-shop-band,
   .home-community,
-  .footer-community,
-  .footer-grid {
+  .footer-community {
     grid-template-columns: 1fr;
   }
 
@@ -5406,4 +5407,15 @@ body:has(.home-content) {
   .home-featured-card img {
     height: 190px;
   }
+}
+
+/* Keep footer navigation together on phones; stack only on very narrow screens. */
+@media (max-width: 600px) {
+  .footer-grid { gap: 12px; padding: 20px 0 16px; }
+  .footer-grid nav { gap: 6px; }
+  .footer-grid h2 { letter-spacing: 0.08em; }
+}
+
+@media (max-width: 359px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 20px; }
 }
