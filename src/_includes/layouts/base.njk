@@ -3,6 +3,33 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script id="wealth-and-scrubs-analytics">
+      (() => {
+        const measurementId = "G-BBMW70ZFHE";
+        // Keep local/preview visits and visitors who opt out out of Analytics.
+        if (!["wealthandscrubs.com", "www.wealthandscrubs.com"].includes(location.hostname) ||
+            navigator.globalPrivacyControl === true ||
+            navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" ||
+            window.doNotTrack === "1" ||
+            window["ga-disable-" + measurementId] === true ||
+            window.wealthAndScrubsAnalyticsInitialized) return;
+
+        window.wealthAndScrubsAnalyticsInitialized = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+        window.gtag("js", new Date());
+        // Full-page navigation uses GA4's automatic page_view; do not send another.
+        // Do not override any consent defaults or updates supplied by a consent manager.
+        window.gtag("config", measurementId, {
+          allow_google_signals: false,
+          allow_ad_personalization_signals: false
+        });
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=" + measurementId;
+        document.head.appendChild(script);
+      })();
+    </script>
     <title>{% if title and title != site.name %}{{ title }} | {% elif category %}{{ category.name }} | {% endif %}{{ site.name }}</title>
     <meta name="description" content="{{ description or category.description or excerpt or site.description }}">
     <meta name="robots" content="index, follow">

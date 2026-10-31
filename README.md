@@ -67,6 +67,34 @@ pnpm build
 
 The deployable site is generated in `_site/`.
 
+## Google Analytics
+
+The shared `src/_includes/layouts/base.njk` head initializes GA4 measurement ID
+`G-BBMW70ZFHE` once per document on `wealthandscrubs.com` and
+`www.wealthandscrubs.com`. All public HTML pages inherit this layout. Navigation
+loads full documents, so GA4's automatic `page_view` handles both landing visits
+and page-to-page navigation; do not add manual page-view or link-click handlers.
+Local and preview hosts do not send production traffic.
+
+Tracking skips visitors with Global Privacy Control, Do Not Track, or
+`window['ga-disable-G-BBMW70ZFHE'] === true`. Google signals and advertising
+personalization are disabled. The site currently has no consent manager; this
+initializer preserves any queued consent settings and does not grant consent.
+If a consent manager is introduced, set its defaults before this script and
+connect its consent updates to `gtag`.
+
+Validate after building:
+
+```bash
+node --test scripts/test-analytics.mjs
+```
+
+After deployment, use Google Tag Assistant and GA4 Realtime to verify a visit
+and navigation to another page. Use a browser without tracking blockers and with
+privacy opt-out signals disabled for this test. Check that each page load sends
+one `page_view` to `G-BBMW70ZFHE`; anchor jumps must not send extra page views.
+Standard reports can take 24–48 hours to populate.
+
 ## Deploy on Cloudflare Workers
 
 Connect this repository to a Cloudflare Workers project and use:
